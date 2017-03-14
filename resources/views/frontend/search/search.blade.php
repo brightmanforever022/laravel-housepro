@@ -72,7 +72,7 @@
       <p class="more_options">More Options +</p>
       <div class="more_search_options">
         <p class="close_options">Close Options x</p>
-Here are some options for search
+          Here are some options for search
       </div>
     </div>
     <!--/form --> 
