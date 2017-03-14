@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "apartolino-1475152888570",
+  "private_key_id": "f9e60fde68225ef3d9b0e96ebc6ac8503e6ccd3e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDczJQGyNfloFf6\nVIgmjidQ9+z3aaJwNszOhpfbHTSbX7/5BqB8X8NMq/hmID85B/q6n2KsKtP1iW79\ny1U9ppqTfX6zJxmoxLu4bJzv5nLaw8RT84g3QgrY8ddn6fwEx+j33zzq/av1RtiZ\nqKbjRKzR+F0v75Mw0SgMarpW/mw8vtRMCdZHqbQB0ZPsWBR2uRU5xzMc9ZOTm/lN\ndEWQkJnEVIGl/Kgo0VHNGl3keflMZAsE3bOOPAeZQJHx7lRI3QYApT5DF9rXHuVx\n2OF7+pVCdm5cDtaq9JDOfcRxb/9i/G+s62m2IfKH82/R1B76MstLZskZUnh1v3hN\nrRSDUIO/AgMBAAECggEBAM8RGH1oW3igsAE2x1yJEfwQFm5M5aag7d99P+qgcBaK\nbEnJWjZpxIkh+dkkwsXkYtIj6XCW1aK+WZWv2+fuV6acGXc/4wNwRLAHRAKDtxDM\naVFl4UgZKn0cCKwONmfxZt0WwVWLwnlLEJTCIoiefgiICDSNVBeC/zDt4oT1I2Ku\nwV/6Z4tdRetCGlyknbnoMTIMEaPOCeLiaVA4Y2qYTInko98YVNIX2731BTp0vJFu\nwctEM9UzrTvsJc8O4sR/plIMuJnYsucK0Z4LQqMOp6AsZY0qoUB+cexchoMJ0u7E\nPdt7gvkJoP2bwwoSQYVVhv5fqdqa4CG4Z3DKOpjbSMECgYEA+2E/T906OZYyLHcl\n3RnMf8xV6JZb2ORyacaJV9KahMzUhs3s0BKh8jXEL/l3aeAx1EQU5jlQCM5atpEd\nZpfKk/BiWFihnNSmspGAtyf4eHvMasZKvrjris6GpsOaeusHlWLQJjYl9Yj8DTPJ\nLe5viPThOYfYpe/xYDzozp6JOt8CgYEA4NtygMKkwTCYz+gPp9wfaFZ3SUS2PMkx\noc9PlEGK30WX46twVREySRyzS/jwT+1OCWj+WqxjzGDNqpTdxDiOrck5EdCulAPA\n6r5E4J9zu7SsoYQlcR1NBxI2G4Cfg+QtVK6f8QFIkO6Rngf0jyw7CJMl9H2xLOS6\njM3P0UVKsyECgYAwjGJ+2RnynzhHcCdm4SGmmN8KkWdhpxUVqptB09G1zh1Jf6G5\nua9/KLUgEszmLL9S4Gcs42q6mKfaVIJaGvyrv6Qurcdgk40yNXmnZdfN5RLgmDU9\nSldrMmG8+U/vZ07Kog/TIWgJWJBdOGAlN8RgrfKFet/zhDiYvoqzxNh5/wKBgA6/\nFZFQMpHg6ASqiWxOyViEYypQ8UqnPzQHboagjcT6wW1S7vkFObEFytRurQPw4i9H\nzXaQ27KpnpNTU//sXZ8UFUQP1YMrg9lhRQ8eJe7neHLXQcVbUJPoI9hF5TA3JKnr\nEd4yYVnv62jbyLQjCHQVgmW4YIg7L+jQDpMA4ldBAoGAXVzalOsA5//z8TCmB868\nMyMKjdLnht+xtTXu5OCreRFBSq10PmnFyErvNaaU9zntV9h+lWSTjjSw+Pwr0mMX\nCP9Oiyw7VZf55zUgO0lAnliTw8/IT6HtgtDV9ae74gLyfxXgvOq8GZU+2a/p4R4b\nqZ7RULdPotwAYLd82V57qtA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "apartolino@apartolino-1475152888570.iam.gserviceaccount.com",
+  "client_id": "105942262502124849749",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apartolino%40apartolino-1475152888570.iam.gserviceaccount.com"
+}
