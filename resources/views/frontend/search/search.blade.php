@@ -22,7 +22,8 @@
 </script>
 <div class="listing-search">
     <!--form action="{{ url('/search') }}" method="post"-->
-
+    <div class="listing-left">
+      <div class="row">
    {!! Form::open(array('url' => '/search_search', 'id' => 'index_search_search', 'method' => 'post')) !!}
 
    {{ csrf_field() }}
@@ -66,11 +67,18 @@
         <li><button type="submit" id="search_button">SEARCH</button></li>
     </ul>
     <div class="clearfix"></div>
-    <p class="more_options">More Options +</p>
+  </div>
+    <div class="row more_option_block">
+      <p class="more_options">More Options +</p>
+      <div class="more_search_options">
+        <p class="close_options">Close Options x</p>
+Here are some options for search
+      </div>
+    </div>
     <!--/form --> 
     {!! Form::close() !!}
 
-    <div class="listing-left">
+    <!-- <div class="listing-left"> -->
         <div class="row">
             <?php if($price == "") $price = "1-10000"; ?>
             @if(count($porperties) != 0)
@@ -470,6 +478,15 @@
                 }
             }
       }); 
+
+      $('.more_options').on('click', function(){
+        $('.more_search_options').css('display', 'block');
+        $('.more_options').css('display', 'none');
+      });
+      $('.close_options').on('click', function(){
+        $('.more_search_options').css('display', 'none');
+        $('.more_options').css('display', 'block');
+      });
       
     });     
 </script>

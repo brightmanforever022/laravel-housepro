@@ -2781,7 +2781,11 @@ figure .offer-detail-bg .flexslider .slides img{
 	list-style:none;
 	float:left;
 	width:12%;
-	margin-right:1%;
+	/*margin-right:1%;*/
+	border-right: 1px solid #c1c1c1;
+}
+.listing-search form ul li:last-child{
+	border-right: none;
 }
 .listing-search form ul li input[type=text]{
 	background:#fff;
@@ -2809,8 +2813,21 @@ figure .offer-detail-bg .flexslider .slides img{
 	padding:0 15px;
 
 }
-.more_options{
+.more_options, .close_options{
 	margin: 20px 10px;
+}
+p.more_options{
+	margin-left: 10px!important;
+}
+.more_search_options{
+	padding: 10px;
+	background-color: #FFF;
+	display: none;
+	opacity: 80%;
+}
+.more_option_block{
+	margin: 0;
+	margin-bottom: 40px;
 }
 h6.titile-property {
     color: #222;
