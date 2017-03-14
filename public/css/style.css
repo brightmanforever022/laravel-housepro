@@ -2829,6 +2829,25 @@ p.more_options{
 	border: 1px solid #c1c1c1;
 	margin-top: 20px;
 }
+.more_search_options li{
+	list-style-type: none;
+}
+.more_search_options ul{
+	-webkit-padding-start: 0;
+}
+.more_search_options .more_search_options_list{
+	float: left;
+	width: 20%;
+	padding: 2%;
+}
+.more_search_options .more_search_options_list input[type="checkbox"] {
+	-ms-transform: scale(2);
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);
+	-o-transform: scale(2);
+	margin-right:15px;
+	margin-top: 22px;
+}
 .more_option_block{
 	margin: 0;
 	margin-bottom: 40px;
