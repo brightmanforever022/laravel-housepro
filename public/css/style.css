@@ -2825,6 +2825,10 @@ p.more_options{
 	display: none;
 	opacity: 80%;
 }
+.more_search_options .select-icon {
+	border: 1px solid #c1c1c1;
+	margin-top: 20px;
+}
 .more_option_block{
 	margin: 0;
 	margin-bottom: 40px;
@@ -3855,6 +3859,7 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	    width: 75%;
 	    margin: 10px auto;
 	    float: none;
+	    border-right: none;
 	}
 	.listing-search {
 	    padding: 15px;

@@ -72,7 +72,21 @@
       <p class="more_options">More Options +</p>
       <div class="more_search_options">
         <p class="close_options">Close Options x</p>
-          Here are some options for search
+        <div class="select-icon">
+          {{ Form::select('bedroom', array('' => 'Bedroom', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+        </div>
+        <div class="select-icon">
+          {{ Form::select('bathroom', array('' => 'Bathroom', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+        </div>
+        <div class="select-icon">
+          {{ Form::select('bed', array('' => 'Beds', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+        </div>
+        <div class="select-icon">
+          {{ Form::select('lining_space', array('' => 'Living Space m2', '32' => '32', '45' => '45','55' => '55','75' => '75', '100' => '100',)) }}
+        </div>
+        <div class="select-icon">
+          {{ Form::select('property_type_id', array('' => 'Property Type', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+        </div>
       </div>
     </div>
     <!--/form --> 
