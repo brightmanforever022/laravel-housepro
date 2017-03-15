@@ -140,7 +140,7 @@
               <li><label for="cellar"><input type="checkbox" id="cellar" name="cellar" />Cellar</label></li>
             </ul>
           </li>
-          <div class="clearfix"></div> 
+          <div class="clearfix"></div>
         </ul>
       </div>
     </div>
