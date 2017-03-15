@@ -595,6 +595,7 @@ class SearchController extends Controller
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
+            // more search options
 
        
             return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
