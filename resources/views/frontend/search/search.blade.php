@@ -548,7 +548,7 @@
             }
       }); 
 
-      $('.more_options').on('click', function(){
+      $('.more_options').on('click', function(){ // popup more search options
         $('.more_search_options').css('display', 'block');
         $('.more_options').css('display', 'none');
       });
