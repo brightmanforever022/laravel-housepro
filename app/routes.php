@@ -251,8 +251,6 @@ Route::get('/booking-tenant', function () {
     return view('frontend.property.booking-tenant')->with('bookings', $bookings);;
 });
 
-
-
 //Booking Functionality
 Route::get('/accept/{id}', 'UserController@accept');
 
