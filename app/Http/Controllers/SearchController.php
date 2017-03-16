@@ -646,6 +646,5 @@ class SearchController extends Controller
       }
 
       return $last_result;
-
     }
 }
