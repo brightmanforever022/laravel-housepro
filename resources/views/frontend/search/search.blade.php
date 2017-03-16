@@ -557,6 +557,7 @@
         $('.more_options').css('display', 'block');
         // reset form elements
         $('#index_search_search')[0].reset();
+        
       });
       
     });     
