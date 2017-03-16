@@ -86,7 +86,6 @@ class SearchController extends Controller
          echo $html;
         die;
     }
-
    
     public function google_api()
       {
