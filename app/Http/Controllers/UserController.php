@@ -120,38 +120,38 @@ class UserController extends Controller
 
    foreach(Input::all() as $key=>$data)
    {
-   $type = explode(':',explode(';', $data['profile_pic'])[0])[1];
-   if($type == 'image/jpeg')
-   $extention = 'jpg';
-   else if($type == 'image/png')
-   $extention = 'png';
-   else if($type == 'image/gif')
-   $extention = 'gif';
-   else
-   $extention = 'jpg'; 
-    
-    list($typepp, $data['profile_pic']) = explode(';', $data['profile_pic']);
-    list(, $data['profile_pic']) = explode(',', $data['profile_pic']);
-    $filenamepp = 'pp' . date('Ymdhis') .$key.'profile.'.$extention; 
-    $uploadpp = base_path().'/public/images/profile/'.$filenamepp;
-    $imagepp = base64_decode($data['profile_pic']);
-    file_put_contents($uploadpp, $imagepp);
+      $type = explode(':',explode(';', $data['profile_pic'])[0])[1];
+      if($type == 'image/jpeg')
+      $extention = 'jpg';
+      else if($type == 'image/png')
+      $extention = 'png';
+      else if($type == 'image/gif')
+      $extention = 'gif';
+      else
+      $extention = 'jpg'; 
 
-    list($width, $height) = getimagesize($uploadpp);
-    
-    $uploadpp_thumb = base_path().'/public/images/thumb/'.$filenamepp;
-    if($width > 3000 && $height > 2000)
-    $imagedata = NameImage::make( file_get_contents($uploadpp))->crop(1500, 1500)->save($uploadpp_thumb);
-    else if($width > 1500 && $height > 900)
-    $imagedata = NameImage::make( file_get_contents($uploadpp))->crop(900, 900)->save($uploadpp_thumb); 
-    else 
-    $imagedata = NameImage::make( file_get_contents($uploadpp))->save($uploadpp_thumb);   
+      list($typepp, $data['profile_pic']) = explode(';', $data['profile_pic']);
+      list(, $data['profile_pic']) = explode(',', $data['profile_pic']);
+      $filenamepp = 'pp' . date('Ymdhis') .$key.'profile.'.$extention; 
+      $uploadpp = base_path().'/public/images/profile/'.$filenamepp;
+      $imagepp = base64_decode($data['profile_pic']);
+      file_put_contents($uploadpp, $imagepp);
+
+      list($width, $height) = getimagesize($uploadpp);
+
+      $uploadpp_thumb = base_path().'/public/images/thumb/'.$filenamepp;
+      if($width > 3000 && $height > 2000)
+      $imagedata = NameImage::make( file_get_contents($uploadpp))->crop(1500, 1500)->save($uploadpp_thumb);
+      else if($width > 1500 && $height > 900)
+      $imagedata = NameImage::make( file_get_contents($uploadpp))->crop(900, 900)->save($uploadpp_thumb); 
+      else 
+      $imagedata = NameImage::make( file_get_contents($uploadpp))->save($uploadpp_thumb);   
 
 
-    
-    $image_data = ['session_id' => $data['_token'],'path' => $filenamepp, 'property_id' => $data['property_id']];
-    //print_r($image_data);
-    $this->image_model->create($image_data);
+
+      $image_data = ['session_id' => $data['_token'],'path' => $filenamepp, 'property_id' => $data['property_id']];
+      //print_r($image_data);
+      $this->image_model->create($image_data);
 
    } 
     die;
