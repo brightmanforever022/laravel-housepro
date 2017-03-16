@@ -330,7 +330,7 @@ class SearchController extends Controller
          }else if($start_date!= "" && $end_date != ""){
 
            if(strstr($end_date, '/')){
-              $dt = \DateTime::createFromFormat('y-d-m', explode('/', $end_date)[2].'-'.explode('/', $end_date)[0].'-'.explode('/', $end_date)[1])->format('Y-m-d');;
+              $dt = \DateTime::createFromFormat('y-d-m', explode('/', $end_date)[2].'-'.explode('/', $end_date)[0].'-'.explode('/', $end_date)[1])->format('Y-m-d');
            }else
            {
               $dt=$end_date;
