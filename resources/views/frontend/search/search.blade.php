@@ -555,6 +555,7 @@
       $('.close_options').on('click', function(){ // pop off more search options
         $('.more_search_options').css('display', 'none');
         $('.more_options').css('display', 'block');
+        // reset form elements
       });
       
     });     
