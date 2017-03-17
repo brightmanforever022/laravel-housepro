@@ -24,6 +24,7 @@
     <!--form action="{{ url('/search') }}" method="post"-->
     <div class="listing-left">
       <div class="row">
+      <!-- Form -->
    {!! Form::open(array('url' => '/search_search', 'id' => 'index_search_search', 'method' => 'post')) !!}
 
    {{ csrf_field() }}
