@@ -75,6 +75,7 @@
         <p class="close_options">Close Options x</p>
         <ul>
           <li class="more_search_options_list">
+            <!-- Selectbox List -->
             <ul>
               <li>
                 <div class="select-icon">
