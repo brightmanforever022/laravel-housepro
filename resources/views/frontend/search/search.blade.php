@@ -103,6 +103,7 @@
                 </div>
               </li>
             </ul>
+            <!-- Selectbox List -->
           </li>
           <!-- Checkbox list -->
           <li class="more_search_options_list">
