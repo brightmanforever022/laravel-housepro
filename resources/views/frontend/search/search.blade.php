@@ -142,6 +142,7 @@
               <li><label for="cellar"><input type="checkbox" id="cellar" name="cellar" />Cellar</label></li>
             </ul>
           </li>
+          <!-- Checkbox list End -->
           <div class="clearfix"></div>
         </ul>
       </div>
