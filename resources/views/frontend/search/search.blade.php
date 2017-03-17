@@ -103,6 +103,7 @@
               </li>
             </ul>
           </li>
+          <!-- Checkbox list -->
           <li class="more_search_options_list">
             <ul>
               <li><label for="non_smoking"><input type="checkbox" id="non_smoking" name="non_smoking" />Non Smoking</label></li>
