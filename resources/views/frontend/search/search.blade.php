@@ -118,7 +118,7 @@
               <li><label for="pods"><input type="checkbox" id="pods" name="pods" />Pods, dishes</label></li>
             </ul>
           </li>
-          
+
           <li class="more_search_options_list">
             <ul>
               <li><label for="hairdryer"><input type="checkbox" id="hairdryer" name="hairdryer" />Hairdryer</label></li>
@@ -130,6 +130,7 @@
               <li><label for="dishwasher"><input type="checkbox" id="dishwasher" name="dishwasher" />Dishwasher</label></li>
             </ul>
           </li>
+
           <li class="more_search_options_list">
             <ul>
               <li><label for="wardrobe"><input type="checkbox" id="wardrobe" name="wardrobe" />Built-in wardrobe</label></li>
@@ -138,6 +139,7 @@
               <li><label for="laundry"><input type="checkbox" id="laundry" name="laundry" />Laundry</label></li>
             </ul>
           </li>
+          
           <li class="more_search_options_list">
             <ul>
               <li><label for="wheelchair_access"><input type="checkbox" id="wheelchair_access" name="wheelchair_access" />Wheelchair access</label></li>
