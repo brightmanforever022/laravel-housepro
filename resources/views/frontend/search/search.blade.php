@@ -105,6 +105,7 @@
             </ul>
             <!-- Selectbox List -->
           </li>
+          
           <!-- Checkbox list -->
           <li class="more_search_options_list">
             <ul>
@@ -145,7 +146,7 @@
             </ul>
           </li>
           <!-- Checkbox list End -->
-          
+
           <div class="clearfix"></div>
         </ul>
       </div>
