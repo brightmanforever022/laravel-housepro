@@ -145,6 +145,7 @@
             </ul>
           </li>
           <!-- Checkbox list End -->
+          
           <div class="clearfix"></div>
         </ul>
       </div>
