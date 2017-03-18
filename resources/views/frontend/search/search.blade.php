@@ -105,7 +105,7 @@
             </ul>
             <!-- Selectbox List -->
           </li>
-          
+
           <!-- Checkbox list -->
           <li class="more_search_options_list">
             <ul>
@@ -118,6 +118,7 @@
               <li><label for="pods"><input type="checkbox" id="pods" name="pods" />Pods, dishes</label></li>
             </ul>
           </li>
+          
           <li class="more_search_options_list">
             <ul>
               <li><label for="hairdryer"><input type="checkbox" id="hairdryer" name="hairdryer" />Hairdryer</label></li>
