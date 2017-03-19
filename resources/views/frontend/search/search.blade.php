@@ -47,11 +47,11 @@
         </li>
         <li>
             <div class="select-icon">
-                    @if($start_date != '')
-                    <input type="text" class="datepicker" name="start_date"  placeholder="Check In" id="startdate_start" value="{{ date('d/m/y',strtotime($start_date)) }}" data-date-format='dd/mm/yy'/>
-                    @else
-                    <input type="text" class="datepicker" name="start_date"  placeholder="Check In" id="startdate_start" value="" data-date-format='dd/mm/yy'/>
-                    @endif
+              @if($start_date != '')
+              <input type="text" class="datepicker" name="start_date"  placeholder="Check In" id="startdate_start" value="{{ date('d/m/y',strtotime($start_date)) }}" data-date-format='dd/mm/yy'/>
+              @else
+              <input type="text" class="datepicker" name="start_date"  placeholder="Check In" id="startdate_start" value="" data-date-format='dd/mm/yy'/>
+              @endif
                 
             </div>
         </li>
