@@ -476,6 +476,7 @@ class SearchController extends Controller
         }
     }
 
+// added more options
     public function search_search()
     {
 
