@@ -600,17 +600,7 @@ class SearchController extends Controller
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
-            // more search options
-
             
-            if($search_keys['bedroom1'] != null) {
-              $temp_properties = $porperties->where('bedroom', '=', $search_keys['bedroom1'])->get();
-              // echo $search_keys['bedroom1'];exit;
-            }else{
-              $temp_properties = $porperties;
-            }
-
-            // end more search options
             return view('frontend.search.search')->with('porperties', $temp_properties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
         }else
         {
@@ -620,56 +610,19 @@ class SearchController extends Controller
 
     }
 
-    }
-    private function ($properties, $more_keys){
+    private function search_more_option($properties, $more_keys){
       $last_result = $properties;
 
-      if($search_keys['bedroom1'] != null) {
-        $last_result = $last_result->where('bedroom', '=', $search_keys['bedroom1'])->get();
-      }else if($search_keys['bathroom'] != null){
-        $last_result = $last_result->where('bathroom', '=', $search_keys['bathroom'])->get();
-      }else if($search_keys['bed'] != null){
-        $last_result = $last_result->where('bed', '=', $search_keys['bed'])->get();
-      }else if($search_keys['lining_space'] != null){
-        $last_result = $last_result->where('lining_space', '>=', $search_keys['lining_space'])->get();
-      }else if($search_keys['property_type_id'] != null){
-        $last_result = $last_result->where('property_type_id', '=', $search_keys['property_type_id'])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
-      }else if($search_keys[''] != null){
-        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      if($more_keys['bedroom1'] != null) {
+        $last_result = $last_result->where('bedroom', '=', $more_keys['bedroom1'])->get();
+      }else if($more_keys['bathroom'] != null){
+        $last_result = $last_result->where('bathroom', '=', $more_keys['bathroom'])->get();
+      }else if($more_keys['bed'] != null){
+        $last_result = $last_result->where('bed', '=', $more_keys['bed'])->get();
+      }else if($more_keys['lining_space'] != null){
+        $last_result = $last_result->where('lining_space', '>=', $more_keys['lining_space'])->get();
+      }else if($more_keys['property_type_id'] != null){
+        $last_result = $last_result->where('property_type_id', '=', $more_keys['property_type_id'])->get();
       }
 
       return $last_result;
