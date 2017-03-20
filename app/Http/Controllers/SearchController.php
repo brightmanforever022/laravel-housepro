@@ -503,6 +503,16 @@ class SearchController extends Controller
           $where .= ' AND property_type_id=' . $search_keys['property_type_id'];
         }
 
+        // making features list of more search
+        $more_search = array();
+        for($i = 1; $i <= 22; $i++){
+          $more_key = 'feature_' . $i;
+          if(isset($search_keys[$more_key]) && $search_keys[$more_key] != null){
+            array_push($more_search, $i);
+          }
+        }
+// print_r($more_search);exit;
+
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
         $datepicker = Input::get('start_date'); 
@@ -618,7 +628,7 @@ class SearchController extends Controller
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
             
-            return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
+            return view('frontend.search.search')->with('porperties', $this->helper->getPropertiesByFeature($porperties, $more_search))->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
         }else
         {
             \Session::flash('message1', 'We could not find any locations with the name "". Please check the name and search again.'); 

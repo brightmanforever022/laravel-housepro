@@ -1,6 +1,7 @@
 <?php
 
 use App\Property;
+use App\PropertyFeature;
 use App\PropertyDate;
 
 class ApartHelper
@@ -132,6 +133,37 @@ class ApartHelper
         } catch (\Exception $e) {
             dd($e);
         }
+    }
+
+    /**
+    * Gets the properties by date.
+    *
+    * @param      array   $properties       The properties
+    * @param      array   $more_search      More Search Options of Features by more search modal. For example [1,4,7,8]
+    *
+    * @return     array   The properties by feature.
+    */
+    public function getPropertiesByFeature($properties, $more_search){
+
+        $result = array();
+        if(count($more_search) > 0){
+            foreach ($properties as $property) {
+                $property_features = PropertyFeature::where('property_id', $property->id)->get();
+                $property_features_list = array();
+                foreach ($property_features as $property_feature) {
+                    array_push($property_features_list, $property_feature->feature_id);
+                }
+                if(count(array_intersect($more_search, $property_features_list)) == count($more_search)){
+                    array_push($result, $property);
+                }
+            }
+        // print_r($more_search);exit;
+
+            return $result;
+        }else{
+            return $properties;
+        }
+
     }
 
     public function sortArrayByDate ($array)
