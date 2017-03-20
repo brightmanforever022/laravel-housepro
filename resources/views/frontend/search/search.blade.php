@@ -79,7 +79,7 @@
             <ul>
               <li>
                 <div class="select-icon">
-                  {{ Form::select('bedroom', array('' => 'Bedroom', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+                  {{ Form::select('bedroom1', array('' => 'Bedroom', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
                 </div>
               </li>
               <li>

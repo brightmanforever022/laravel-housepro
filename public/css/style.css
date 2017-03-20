@@ -2815,9 +2815,11 @@ figure .offer-detail-bg .flexslider .slides img{
 }
 .more_options, .close_options{
 	margin: 20px 10px;
+	cursor: pointer;
 }
 p.more_options{
 	margin-left: 10px!important;
+	cursor: pointer;
 }
 .more_search_options{
 	padding: 10px;

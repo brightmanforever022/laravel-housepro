@@ -481,7 +481,18 @@ class SearchController extends Controller
     {
 
         $city_where_met = explode(',', Input::get('city_where_met_search'))[0];
-         
+
+        // getting all search options from search form
+        $search_keys = Input::get();
+        
+        // Initialize where clause
+        $where = '';
+
+        // making more where clause by using more search options
+        if($search_keys['bedroom1'] != null) {
+          // $where .= 
+        }
+
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
         $datepicker = Input::get('start_date'); 
