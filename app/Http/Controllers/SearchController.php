@@ -476,7 +476,6 @@ class SearchController extends Controller
         }
     }
 
-// added more options
     public function search_search()
     {
 
@@ -485,13 +484,7 @@ class SearchController extends Controller
         // getting all search options from search form
         $search_keys = Input::get();
         
-        // Initialize where clause
-        $where = '';
-
-        // making more where clause by using more search options
-        if($search_keys['bedroom1'] != null) {
-          // $where .= 
-        }
+        
 
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
@@ -550,7 +543,7 @@ class SearchController extends Controller
           
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if ($bedroom < 8 && $end_date_search == "")
@@ -563,7 +556,7 @@ class SearchController extends Controller
                   //   }
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search); 
+                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search); 
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if($bedroom >= 8 && $end_date_search != "")
@@ -576,7 +569,7 @@ class SearchController extends Controller
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                     if (count($porperties1) > 0)
                     {
-                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                        $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
                     $pass_end = "";
@@ -588,7 +581,7 @@ class SearchController extends Controller
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                     if (count($porperties1) > 0) 
                     {
-                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                        $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
                 }
@@ -603,19 +596,83 @@ class SearchController extends Controller
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) 
                 {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
             // more search options
 
+            
+            if($search_keys['bedroom1'] != null) {
+              $temp_properties = $porperties->where('bedroom', '=', $search_keys['bedroom1'])->get();
+              // echo $search_keys['bedroom1'];exit;
+            }else{
+              $temp_properties = $porperties;
+            }
+
             // end more search options
-            return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
+            return view('frontend.search.search')->with('porperties', $temp_properties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
         }else
         {
             \Session::flash('message1', 'We could not find any locations with the name "". Please check the name and search again.'); 
             return back(); 
         }  
+
+    }
+
+    }
+    private function ($properties, $more_keys){
+      $last_result = $properties;
+
+      if($search_keys['bedroom1'] != null) {
+        $last_result = $last_result->where('bedroom', '=', $search_keys['bedroom1'])->get();
+      }else if($search_keys['bathroom'] != null){
+        $last_result = $last_result->where('bathroom', '=', $search_keys['bathroom'])->get();
+      }else if($search_keys['bed'] != null){
+        $last_result = $last_result->where('bed', '=', $search_keys['bed'])->get();
+      }else if($search_keys['lining_space'] != null){
+        $last_result = $last_result->where('lining_space', '>=', $search_keys['lining_space'])->get();
+      }else if($search_keys['property_type_id'] != null){
+        $last_result = $last_result->where('property_type_id', '=', $search_keys['property_type_id'])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }else if($search_keys[''] != null){
+        $last_result = $last_result->where('', '=', $search_keys[''])->get();
+      }
+
+      return $last_result;
 
     }
 }
