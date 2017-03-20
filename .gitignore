@@ -4,5 +4,6 @@
 Homestead.yaml
 Homestead.json
 composer.lock
+sftp-config.json
 /storage
 .env
