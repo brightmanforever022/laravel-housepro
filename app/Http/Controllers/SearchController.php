@@ -484,7 +484,24 @@ class SearchController extends Controller
         // getting all search options from search form
         $search_keys = Input::get();
         
-        
+        // making more where clauses
+        $where = '1';
+        if($search_keys['bedroom1'] != null) {
+          $where .= ' AND bedroom=' . $search_keys['bedroom1'];
+        }
+  // print_r($last_result);exit;
+        if($search_keys['bathroom'] != null){
+          $where .= ' AND bathroom=' . $search_keys['bathroom'];
+        }
+        if($search_keys['bed'] != null){
+          $where .= ' AND bed=' . $search_keys['bed'];
+        }
+        if($search_keys['lining_space'] != null){
+          $where .= ' AND lining_space>=' . $search_keys['lining_space'];
+        }
+        if($search_keys['property_type_id'] != null){
+          $where .= ' AND property_type_id=' . $search_keys['property_type_id'];
+        }
 
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
@@ -534,7 +551,7 @@ class SearchController extends Controller
 
             if ($bedroom >= 8 && $end_date_search == "")
             { 
-                $porperties1 = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
                 // if(Input::get('start_date') == ""){
                 //   }else {
@@ -543,12 +560,12 @@ class SearchController extends Controller
           
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
+                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if ($bedroom < 8 && $end_date_search == "")
             {
-                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
                   // if(Input::get('start_date') == ""){
                   //   }else {
@@ -556,12 +573,12 @@ class SearchController extends Controller
                   //   }
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search); 
+                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search); 
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if($bedroom >= 8 && $end_date_search != "")
             {
-                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
                 if ($start_date > $end_date_search) 
                 {
                     // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
@@ -569,19 +586,19 @@ class SearchController extends Controller
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                     if (count($porperties1) > 0)
                     {
-                        $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
+                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
                     $pass_end = "";
                 }else 
                 {
-                    $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();  
+                    $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get();  
                     // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $end_date_search)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
             
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                     if (count($porperties1) > 0) 
                     {
-                        $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
+                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
                 }
@@ -589,14 +606,14 @@ class SearchController extends Controller
                 //$porperties = $this->return_filter($porperties, $start_date, $end_date); 
             }else
             {  
-                $porperties1 = $this->property->where('apartment_for', '>=', $bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for', '>=', $bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $end_date_search)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
                 //$porperties = $this->return_filter($porperties, $start_date, $end_date);
           
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
                 if (count($porperties1) > 0) 
                 {
-                    $porperties = $this->helper->getPropertiesByDate($this->search_more_option($porperties1, $search_keys), $start_date, $end_date_search);
+                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
@@ -612,16 +629,20 @@ class SearchController extends Controller
 
     private function search_more_option($properties, $more_keys){
       $last_result = $properties;
-
       if($more_keys['bedroom1'] != null) {
         $last_result = $last_result->where('bedroom', '=', $more_keys['bedroom1'])->get();
-      }else if($more_keys['bathroom'] != null){
+      }
+// print_r($last_result);exit;
+      if($more_keys['bathroom'] != null){
         $last_result = $last_result->where('bathroom', '=', $more_keys['bathroom'])->get();
-      }else if($more_keys['bed'] != null){
+      }
+      if($more_keys['bed'] != null){
         $last_result = $last_result->where('bed', '=', $more_keys['bed'])->get();
-      }else if($more_keys['lining_space'] != null){
+      }
+      if($more_keys['lining_space'] != null){
         $last_result = $last_result->where('lining_space', '>=', $more_keys['lining_space'])->get();
-      }else if($more_keys['property_type_id'] != null){
+      }
+      if($more_keys['property_type_id'] != null){
         $last_result = $last_result->where('property_type_id', '=', $more_keys['property_type_id'])->get();
       }
 
