@@ -2848,6 +2848,13 @@ p.more_options{
 	margin-right:15px;
 	margin-top: 22px;
 }
+.more_search_options .more_search_options_list .checkbox{
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+.more_search_options .more_search_options_list .checkbox .checkbox-material{
+	margin-right: 10px;
+}
 .more_option_block{
 	margin: 0;
 	margin-bottom: 40px;

@@ -38,7 +38,7 @@ $(document).ready(function(){
                 <?php
                     $property = \App\Property::where('id', $val->property_id)->get()[0];
                     $property_type = \App\PropertyType::where('id', $property['property_type_id'])->get()[0];
-                    // print_r($property);exit;
+                    // print_r($property->images[0]);exit;
                 ?>
                 <div class="col-md-4">
                     

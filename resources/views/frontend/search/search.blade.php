@@ -109,43 +109,43 @@
           <!-- Checkbox list -->
           <li class="more_search_options_list">
             <ul>
-              <li><label for="non_smoking"><input type="checkbox" id="non_smoking" name="non_smoking" />Non Smoking</label></li>
-              <li><label for="tv"><input type="checkbox" id="tv" name="tv" />TV</label></li>
-              <li><label for="w_lan"><input type="checkbox" id="w_lan" name="w_lan" />W-LAN</label></li>
-              <li><label for="bed_linen"><input type="checkbox" id="bed_linen" name="bed_linen" />Bed linen</label></li>
-              <li><label for="work_desk"><input type="checkbox" id="work_desk" name="work_desk" />Work desk</label></li>
-              <li><label for="towels"><input type="checkbox" id="towels" name="towels" />Towels</label></li>
-              <li><label for="pods"><input type="checkbox" id="pods" name="pods" />Pods, dishes</label></li>
+              <li><div class="checkbox"><label for="non_smoking"><input type="checkbox" id="non_smoking" name="non_smoking" />Non Smoking</label></div></li>
+              <li><div class="checkbox"><label for="tv"><input type="checkbox" id="tv" name="tv" />TV</label></div></li>
+              <li><div class="checkbox"><label for="w_lan"><input type="checkbox" id="w_lan" name="w_lan" />W-LAN</label></div></li>
+              <li><div class="checkbox"><label for="bed_linen"><input type="checkbox" id="bed_linen" name="bed_linen" />Bed linen</label></div></li>
+              <li><div class="checkbox"><label for="work_desk"><input type="checkbox" id="work_desk" name="work_desk" />Work desk</label></div></li>
+              <li><div class="checkbox"><label for="towels"><input type="checkbox" id="towels" name="towels" />Towels</label></div></li>
+              <li><div class="checkbox"><label for="pods"><input type="checkbox" id="pods" name="pods" />Pods, dishes</label></div></li>
             </ul>
           </li>
 
           <li class="more_search_options_list">
             <ul>
-              <li><label for="hairdryer"><input type="checkbox" id="hairdryer" name="hairdryer" />Hairdryer</label></li>
-              <li><label for="iron"><input type="checkbox" id="iron" name="iron" />Iron</label></li>
-              <li><label for="phone"><input type="checkbox" id="phone" name="phone" />Phone</label></li>
-              <li><label for="safe"><input type="checkbox" id="safe" name="safe" />Safe</label></li>
-              <li><label for="washing_machine"><input type="checkbox" id="washing_machine" name="washing_machine" />Washing machine</label></li>
-              <li><label for="fridge"><input type="checkbox" id="fridge" name="fridge" />Fridge</label></li>
-              <li><label for="dishwasher"><input type="checkbox" id="dishwasher" name="dishwasher" />Dishwasher</label></li>
+              <li><div class="checkbox"><label for="hairdryer"><input type="checkbox" id="hairdryer" name="hairdryer" />Hairdryer</label></div></li>
+              <li><div class="checkbox"><label for="iron"><input type="checkbox" id="iron" name="iron" />Iron</label></div></li>
+              <li><div class="checkbox"><label for="phone"><input type="checkbox" id="phone" name="phone" />Phone</label></div></li>
+              <li><div class="checkbox"><label for="safe"><input type="checkbox" id="safe" name="safe" />Safe</label></div></li>
+              <li><div class="checkbox"><label for="washing_machine"><input type="checkbox" id="washing_machine" name="washing_machine" />Washing machine</label></div></li>
+              <li><div class="checkbox"><label for="fridge"><input type="checkbox" id="fridge" name="fridge" />Fridge</label></div></li>
+              <li><div class="checkbox"><label for="dishwasher"><input type="checkbox" id="dishwasher" name="dishwasher" />Dishwasher</label></div></li>
             </ul>
           </li>
 
           <li class="more_search_options_list">
             <ul>
-              <li><label for="wardrobe"><input type="checkbox" id="wardrobe" name="wardrobe" />Built-in wardrobe</label></li>
-              <li><label for="parking"><input type="checkbox" id="parking" name="parking" />Parking</label></li>
-              <li><label for="concierge"><input type="checkbox" id="concierge" name="concierge" />Concierge</label></li>
-              <li><label for="laundry"><input type="checkbox" id="laundry" name="laundry" />Laundry</label></li>
+              <li><div class="checkbox"><label for="wardrobe"><input type="checkbox" id="wardrobe" name="wardrobe" />Built-in wardrobe</label></div></li>
+              <li><div class="checkbox"><label for="parking"><input type="checkbox" id="parking" name="parking" />Parking</label></div></li>
+              <li><div class="checkbox"><label for="concierge"><input type="checkbox" id="concierge" name="concierge" />Concierge</label></div></li>
+              <li><div class="checkbox"><label for="laundry"><input type="checkbox" id="laundry" name="laundry" />Laundry</label></div></li>
             </ul>
           </li>
           
           <li class="more_search_options_list">
             <ul>
-              <li><label for="wheelchair_access"><input type="checkbox" id="wheelchair_access" name="wheelchair_access" />Wheelchair access</label></li>
-              <li><label for="fitness_center"><input type="checkbox" id="fitness_center" name="fitness_center" />Fitness Center</label></li>
-              <li><label for="elevator"><input type="checkbox" id="elevator" name="elevator" />Elevator</label></li>
-              <li><label for="cellar"><input type="checkbox" id="cellar" name="cellar" />Cellar</label></li>
+              <li><div class="checkbox"><label for="wheelchair_access"><input type="checkbox" id="wheelchair_access" name="wheelchair_access" />Wheelchair access</label></div></li>
+              <li><div class="checkbox"><label for="fitness_center"><input type="checkbox" id="fitness_center" name="fitness_center" />Fitness Center</label></div></li>
+              <li><div class="checkbox"><label for="elevator"><input type="checkbox" id="elevator" name="elevator" />Elevator</label></div></li>
+              <li><div class="checkbox"><label for="cellar"><input type="checkbox" id="cellar" name="cellar" />Cellar</label></div></li>
             </ul>
           </li>
           <!-- Checkbox list End -->
