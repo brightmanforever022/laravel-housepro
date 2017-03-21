@@ -3016,6 +3016,7 @@ label#phone-error-some{
 
 .how-to-book .iespecial img{
 	margin: 25px 0;
+	width: 100%;
 }
 
 
@@ -3413,6 +3414,9 @@ label#phone-error-some{
     line-height: 20px;
     letter-spacing: 1px;
     display: block;
+}
+.how-to-book .how_title{
+	font-size: 22px;
 }
 .how-to-book p{
 	text-align: center;

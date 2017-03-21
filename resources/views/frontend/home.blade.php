@@ -30,7 +30,7 @@ if(user_type == 1 )
 
 <div class="how-to-book">
     <div class="row">
-        <h1>Why APARTOLINO ?</h1>
+        <h1 class="how_title">Why APARTOLINO ?</h1>
     </div>
     <div class="container">
         <div class="row">
