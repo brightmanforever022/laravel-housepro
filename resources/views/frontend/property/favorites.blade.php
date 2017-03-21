@@ -55,7 +55,7 @@ $(document).ready(function(){
                                 <div class="text1">
                                     <p>CHF {{ $property->price_per_night }}</p>
                                     <span>{{ str_limit($property->title, $limit=30, $end="...") }}</span>
-                                    <p>{{ $property_type['name'] }}</p>
+                                    <p class="accomo">{{ $property_type['name'] }}</p>
                                 </div>
                             </figure>
                         </a>

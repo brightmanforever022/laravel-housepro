@@ -63,7 +63,7 @@
             <p>All rights reserved. 2017</p>
         </div>
     </div>
-    <div class="copyright">All rights reserved. 2016</div>
+    <!-- <div class="copyright">All rights reserved. 2016</div> -->
 </footer>
  <script type="text/javascript" src="{!! url('/') !!}/js/custom/footer.js"></script>
 <script>

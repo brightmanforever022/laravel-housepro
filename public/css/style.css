@@ -3621,11 +3621,15 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
     display: block;
     margin: 0;
     padding: 0;
-    font-weight: 300;
+    font-weight: 700;
 }
 .overview-favorite-box span{
 	color: #222;
+	font-weight: 700;
+}
+.overview-favorite-box p.accomo{
 	font-weight: 300;
+	margin-top: -10px;
 }
 .overview-favorite-box .favorite-close{
 	position: absolute;
