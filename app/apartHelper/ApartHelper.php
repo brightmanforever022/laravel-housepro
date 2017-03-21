@@ -125,11 +125,13 @@ class ApartHelper
                         }
                     }
                     if (!$flag_all_date) {
-                        $porperties = [];
+                        // $porperties = [];
+                        return false;
                     }
                 }
             }
-            return $porperties;
+            // return $porperties;
+            return true;
         } catch (\Exception $e) {
             dd($e);
         }

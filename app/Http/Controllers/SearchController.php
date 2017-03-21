@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 use App\Property;
 use App\PropertyDate;
 use App\Payment;
@@ -235,13 +237,13 @@ class SearchController extends Controller
         }    
         
         if($bedroom >= 8){
-          $porperties = $this->property->where('start_date','<=', $start_date)->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
+          $porperties = $this->property->where('start_date','<=', $start_date)->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->paginate(3);
           if(Input::get('datepicker') == ""){
           }else {
             $porperties = $this->return_filter($porperties, $start_date, $end_date);
           }
         }else{
-          $porperties = $this->property->where('start_date','<=', $start_date)->where('apartment_for','=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
+          $porperties = $this->property->where('start_date','<=', $start_date)->where('apartment_for','=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->pagenate(3);
           $porperties = $this->return_filter($porperties);
         }
 
@@ -286,7 +288,7 @@ class SearchController extends Controller
           }
         
         }
-        return $this->property->whereIn('id', $array_in)->get();
+        return $this->property->whereIn('id', $array_in)->paginate(3);
 
         
      }
@@ -511,6 +513,14 @@ class SearchController extends Controller
             array_push($more_search, $i);
           }
         }
+        
+        $where_feature = "1";
+        
+        foreach($more_search as $one) {
+
+          $where_feature .= " AND $one IN (select feature_id from property_features where property_id=properties.id)";
+          
+        }
 // print_r($more_search);exit;
 
         $price      = Input::get('price'); 
@@ -518,6 +528,8 @@ class SearchController extends Controller
         $datepicker = Input::get('start_date'); 
         $end_date   = Input::get('end_date'); 
 
+        $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// echo $actual_link;exit;
         //print_r (explode("-",Input::get('price')));
         
         $porperties = [];
@@ -561,7 +573,7 @@ class SearchController extends Controller
 
             if ($bedroom >= 8 && $end_date_search == "")
             { 
-                $porperties1 = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->whereraw($where_feature)->orderBy('created_at', 'DESC')->paginate(3); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
                 // if(Input::get('start_date') == ""){
                 //   }else {
@@ -569,46 +581,46 @@ class SearchController extends Controller
                 //       }
           
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
-                if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                if (count($porperties1) > 0 && $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search)) {
+                    $porperties = $porperties1;
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if ($bedroom < 8 && $end_date_search == "")
             {
-                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->whereraw($where_feature)->orderBy('created_at', 'DESC')->paginate(3); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get();
                   // if(Input::get('start_date') == ""){
                   //   }else {
                   //   $porperties = $this->return_filter($porperties, $start_date, $end_date);
                   //   }
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
-                if (count($porperties1) > 0) {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search); 
+                if (count($porperties1) > 0 && $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search)) {
+                    $porperties = $porperties1; 
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
             }else if($bedroom >= 8 && $end_date_search != "")
             {
-                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->whereraw($where_feature)->orderBy('created_at', 'DESC')->paginate(3); 
                 if ($start_date > $end_date_search) 
                 {
                     // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $start_date)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
            
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
-                    if (count($porperties1) > 0)
+                    if (count($porperties1) > 0 && $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search))
                     {
-                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                        $porperties = $porperties1;
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/
                     $pass_end = "";
                 }else 
                 {
-                    $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get();  
+                    $porperties1 = $this->property->where('apartment_for','>=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->whereraw($where_feature)->orderBy('created_at', 'DESC')->paginate(3);  
                     // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $end_date_search)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
             
                     /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
-                    if (count($porperties1) > 0) 
+                    if (count($porperties1) > 0 && $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search)) 
                     {
-                        $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                        $porperties = $porperties1;
                     }
                     /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
                 }
@@ -616,19 +628,19 @@ class SearchController extends Controller
                 //$porperties = $this->return_filter($porperties, $start_date, $end_date); 
             }else
             {  
-                $porperties1 = $this->property->where('apartment_for', '>=', $bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->orderBy('created_at', 'DESC')->get(); 
+                $porperties1 = $this->property->where('apartment_for', '>=', $bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->whereraw($where)->whereraw($where_feature)->orderBy('created_at', 'DESC')->paginate(3); 
                 // $porperties = $this->property->where('apartment_for','<=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->where('start_date','<=', $start_date)->where('end_date','>=', $end_date_search)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->get(); 
                 //$porperties = $this->return_filter($porperties, $start_date, $end_date);
           
                 /**************NEW AVALIABLITY FUNCTIONALITY STARTS HERE*****************/ 
-                if (count($porperties1) > 0) 
+                if (count($porperties1) > 0 && $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search)) 
                 {
-                    $porperties = $this->helper->getPropertiesByDate($porperties1, $start_date, $end_date_search);
+                    $porperties = $porperties1;
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
-            
-            return view('frontend.search.search')->with('porperties', $this->helper->getPropertiesByFeature($porperties, $more_search))->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
+            // print_r($porperties);exit;
+            return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);;
         }else
         {
             \Session::flash('message1', 'We could not find any locations with the name "". Please check the name and search again.'); 

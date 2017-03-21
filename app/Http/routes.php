@@ -97,13 +97,13 @@ Route::get('/search', function () {
   return redirect('/');
 });
 
-Route::get('/search_search', function () {
-  return redirect('/');
-});
+// Route::get('/search_search', function () {
+//   return redirect('/');
+// });
 
 // Route::post('/search_search', 'SearchController@search_search');
 
-Route::post('/search_search', array('as' => 'search_search', 'uses' => 'SearchController@search_search'));
+Route::get('/search_search', array('as' => 'search_search', 'uses' => 'SearchController@search_search'));
 
 Route::post('/searchMap', array('as' => 'searchMap', 'uses' => 'SearchController@searchMap'));
 

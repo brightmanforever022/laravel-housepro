@@ -25,7 +25,7 @@
     <div class="listing-left">
       <div class="row">
       <!-- Form -->
-   {!! Form::open(array('url' => '/search_search', 'id' => 'index_search_search', 'method' => 'post')) !!}
+   {!! Form::open(array('url' => '/search_search', 'id' => 'index_search_search', 'method' => 'get')) !!}
 
    {{ csrf_field() }}
     <ul>
@@ -219,11 +219,14 @@
             @endforeach
             @else
             <div class="col-md-4">
-            <h3>No result found.</h3>
+              <h3>No result found.</h3>
             </div>
             @endif
             
         </div>
+        @if(count($porperties) != 0)
+          {{ $porperties->render() }}
+        @endif
     </div>
 <style>
 #map img {
