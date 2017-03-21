@@ -57,9 +57,10 @@
         </div>
         <div class="row footer-bottom">
             <hr class="footer_split" />
-            <h1>APARTOLINO serviced Apartments</h1>
+            <!-- <h1>APARTOLINO serviced Apartments</h1> -->
             <p>Apartolino one of the largest sites for placement of serviced aprtments. A stay with a provider is the ideal alternative to a hotel room and means for originality, privacy, cost savings and flexibility. Take advantage of the many benefits of Business Apartments: more space, more bedrooms, a kitchen and Wi-Fi and a washing machine - all at no extra cost.</p>
-            <p>Book easily a stay in Switzerland</p>
+            <p>Book easily a stay in Switzerland.</p>
+            <p>All rights reserved. 2017</p>
         </div>
     </div>
     <div class="copyright">All rights reserved. 2016</div>

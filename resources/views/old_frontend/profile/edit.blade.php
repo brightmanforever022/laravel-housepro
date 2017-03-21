@@ -378,7 +378,7 @@ setTimeout(function() {
 					<fieldset class="mar-t0">
                         <p>Customers pay a deposit of more than one month rent, (30 days) or less by credit card.</p>
                     </fieldset>
-                    <h1 class="text-left mar-t100">VAT-nr.</h1>
+                    <h1 class="text-left mar-t40">VAT-nr.</h1>
                      <fieldset>
                         <?php
                             $options = [0.0, 3.8, 8];

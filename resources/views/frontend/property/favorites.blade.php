@@ -59,7 +59,10 @@ $(document).ready(function(){
                                 </div>
                             </figure>
                         </a>
-                        <a href="{{ url('/removeFavorite') }}/{{ $val->id }}" class="favorite-close" onclick="return confirm('Are you sure?')"><i class="fa fa-close"></i></a>
+                        <a href="{{ url('/removeFavorite') }}/{{ $val->id }}" class="favorite-close" onclick="return confirm('Are you sure?')">
+                            <!-- <i class="fa fa-close"></i> -->
+                            <img src="images/cross.png" />
+                        </a>
                         <div class="clearfix"></div>
                     </div>
                 </div>

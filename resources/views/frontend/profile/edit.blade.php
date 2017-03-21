@@ -390,7 +390,7 @@ setTimeout(function() {
 					<fieldset class="mar-t0">
                         <p>Customers pay a deposit of more than one month rent, (30 days) or less by credit card.</p>
                     </fieldset>
-                    <h1 class="text-left mar-t100">VAT-nr.</h1>
+                    <h1 class="text-left mar-t88">VAT-nr.</h1>
                         <fieldset>
                             <input type="text" name="vat_number" value="{{ $user_data[0]->account->vat_number }}" placeholder="VAT registration number*"/>
                         </fieldset>
