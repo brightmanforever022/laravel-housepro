@@ -224,9 +224,11 @@
             @endif
             
         </div>
+        <!-- Pagination Start When $porperties has list -->
         @if(count($porperties) != 0)
           {{ $porperties->render() }}
         @endif
+        <!-- Pagination End -->
     </div>
 <style>
 #map img {
