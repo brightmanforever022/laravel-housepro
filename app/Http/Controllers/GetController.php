@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\DynamicText;
+use DB;
 
 class GetController extends Controller
 {
@@ -28,8 +29,20 @@ class GetController extends Controller
 
     public function getCityLoad()
     {
-       echo json_encode($this->dynamic->where('type', 'city')->get());
-       die;
+       // echo json_encode($this->dynamic->where('type', 'city')->get());
+      $cities = $this->dynamic->where('type', 'city')->get();
+      $city_price_list = array();
+      foreach ($cities as $city) {
+        $city_price = DB::table('properties')->where('plz_place', 'like', '%' . $city->title . '%')->where('price_per_night', DB::raw("(select min(`price_per_night`) from properties where plz_place like '%" . $city->title . "%')"))->get();
+        if(count($city_price) > 0){
+          array_push($city_price_list, $city_price[0]->price_per_night);
+        }else{
+          array_push($city_price_list, '');
+        }
+      }
+
+      echo json_encode(['cities'=>$cities, 'price_list'=>$city_price_list]);
+      die;
     }
 
     public function how_to_book()

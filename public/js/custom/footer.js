@@ -242,9 +242,11 @@ $('#loadCity').click(function(){
             data: {},
             dataType: 'JSON',
             success: function (data) {
+                var city = data.cities;
+                var price_list = data.price_list;
                 var thml = "";
-                for (index = 0; index < data.length; ++index) {
-                   thml = thml+ '<div class="col-md-4 col-sm-6"><a target="_blank" href="'+base_url+'/search_home_link?address='+data[index].title+'"><figure><img src="'+base_url+'/cities/'+data[index].logo+'" class="grayscale grayscale-fade"/><span>'+data[index].title+'</span><h5>'+data[index].description+'</h5></figure></a></div>';
+                for (index = 0; index < city.length; ++index) {
+                   thml = thml+ '<div class="col-md-4 col-sm-6"><a target="_blank" href="'+base_url+'/search_home_link?address='+city[index].title+'"><figure><img src="'+base_url+'/cities/'+city[index].logo+'" class="grayscale grayscale-fade"/><span class="city_price">'+city[index].title+' ab CHF '+ price_list[index]+'</span><h5>'+city[index].description+'</h5></figure></a></div>';
                 }
                 //console.log(thml+'<div class="col-md-12 text-center"></div>');
                 $('#div_append_city').html(thml);
