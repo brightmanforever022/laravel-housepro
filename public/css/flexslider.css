@@ -50,6 +50,7 @@
   display: none;
   -webkit-backface-visibility: hidden;
 }
+/*display li list while loading first images*/
 .flexslider .slides > li:first-child {
   display: block; 
   -webkit-backface-visibility: visible;
