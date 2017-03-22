@@ -155,8 +155,6 @@ $(document).ready(function() {
     });
     
     @endif 
-
-
     
 });
 
