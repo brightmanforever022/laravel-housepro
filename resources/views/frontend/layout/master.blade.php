@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 
     $(window).load(function() {
-      $('.flexslider').flexslider({
+      $('.flexslider').flexslider({  // lazy loading in flexslider
         touch: true,
         slideshow: false,
         controlNav: true,
