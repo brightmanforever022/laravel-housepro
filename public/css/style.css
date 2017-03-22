@@ -223,6 +223,11 @@ header{
 .home {
     padding: 5px 0;
 }
+#div_append_city .city_price{
+	display: block;
+	font-weight: 600;
+	margin-top: 15px;
+}
 .main-nav ul{
 	margin:0;
 	padding:0;
@@ -634,6 +639,14 @@ footer .select-icon select{
 	text-align: left;
 	font-size: 14px;
 	color: #222;
+	font-weight: 600;
+}
+.latest_offer .texthover-home h6{
+	font-weight: 600;
+}
+.latest_offer .texthover-home p.accomo{
+	margin-top: -10px;
+	font-weight: 300;
 }
 .latest_offer .texthover-home a{
 	text-decoration: none;
@@ -2045,7 +2058,7 @@ p.small-text{
 }
 .overview-ads-box figure img{
 	width: 100%;
-    height: 245;
+    height: 245px;
     object-fit: cover;
 }
 /*.overview-ads-box figure .text{
@@ -2875,7 +2888,7 @@ h6.titile-property {
 	text-decoration: none;
 }
 .listing-left a:hover h6.titile-property{
-	color:#777 !important;
+	color:#FB5252 !important;
 	text-decoration: none;
 }
 .listing-left p{
@@ -2894,6 +2907,16 @@ h6.titile-property {
 }
 .texthover{
 	margin-bottom: 30px;
+}
+.texthover .city_price{
+	margin-top: 15px;
+}
+.texthover p, .texthover h6{
+	font-weight: 600;
+}
+.texthover p.accomo{
+	font-weight: 300;
+	margin-top: -10px;
 }
 .listing-left figure img {
     width: 100%;
@@ -3621,11 +3644,11 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
     display: block;
     margin: 0;
     padding: 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 .overview-favorite-box span{
 	color: #222;
-	font-weight: 700;
+	font-weight: 600;
 }
 .overview-favorite-box p.accomo{
 	font-weight: 300;

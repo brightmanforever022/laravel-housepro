@@ -67,11 +67,16 @@ if(user_type == 1 )
         <div class="row mar-t30" id="div_append_city">
             @foreach($cities as $key=>$value)
             @if($key <= 5)
+            <?php 
+                $city_title = $value['title'];
+                $city_price = DB::table('properties')->where('plz_place', 'like', '%' . $city_title . '%')->where('price_per_night', DB::raw("(select min(`price_per_night`) from properties where plz_place like '%" . $city_title . "%')"))->get();
+                // print_r($city_price[0]->price_per_night);exit();
+            ?>
             <div class="col-md-4 col-sm-6">
                 <a target="_blank" href="{{ url('/') }}/search_home_link?address={{ $value['title'] }}">
                     <figure>
                         <img src="{!! url('/') !!}/cities/{{$value['logo']}}" class="grayscale grayscale-fade"/>
-                        <span>{{ $value['title'] }} ab CHF 57</span>
+                        <span class="city_price">{{ $value['title'] }} ab CHF @if(count($city_price)>0) {{ $city_price[0]->price_per_night }} @endif</span>
                         <h5>{{ $value['description'] }}</h5>
                     </figure>
                 </a>
@@ -113,11 +118,11 @@ if(user_type == 1 )
                         
                     </figure>
                     <p>CHF {{ $property->price_per_night }}</p>
-                    <h6 class="titile-property">Very comfortable and cosy apartment</h6>
+                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->description, $limit=30, $end="...") }}</h6>
                     <?php 
                     $property_type = \App\PropertyType::where('id', $property->property_type_id)->get();
                     ?>
-                    <p>{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
+                    <p class="accomo">{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
                 </a>
             </div>
             @else
@@ -132,11 +137,11 @@ if(user_type == 1 )
                         @endif
                     </figure>
                     <p>CHF {{ $property->price_per_night }}</p>
-                    <h6 class="titile-property">Very comfortable and cosy apartment</h6>
+                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->description, $limit=30, $end="...") }}</h6>
                     <?php 
                     $property_type = \App\PropertyType::where('id', $property->property_type_id)->get();
                     ?>
-                    <p>{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
+                    <p class="accomo">{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
                 </a>
             </div>
             @endif

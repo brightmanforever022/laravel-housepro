@@ -207,12 +207,12 @@
                         @endif
                     </figure>
                     
-                    <p>CHF {{ $property->price_per_night }}</p>
+                    <p class="city_price">CHF {{ $property->price_per_night }}</p>
                     <h6 class="titile-property">{{ $property->title }}</h6>
                     <?php 
                     $property_type = \App\PropertyType::where('id', $property->property_type_id)->get();
                     ?>
-                    <p>{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
+                    <p class="accomo">{{ $property_type[0]->name }} in {{ $property->plz_place}}</p>
                 </a>
                 
             </div>
