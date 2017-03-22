@@ -2796,7 +2796,7 @@ figure .offer-detail-bg .flexslider .slides img{
 	display:block;
 	list-style:none;
 	float:left;
-	width:12%;
+	width:16.5%;
 	/*margin-right:1%;*/
 	border-right: 1px solid #c1c1c1;
 }
@@ -2835,6 +2835,7 @@ figure .offer-detail-bg .flexslider .slides img{
 }
 p.more_options{
 	margin-left: 10px!important;
+	margin-top: 10px!important;
 	cursor: pointer;
 }
 .more_search_options{

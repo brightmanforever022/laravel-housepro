@@ -69,6 +69,16 @@
     </ul>
     <div class="clearfix"></div>
   </div>
+<?php
+  $property_type_list = \App\PropertyType::get();
+  $property_types = array();
+  foreach ($property_type_list as $property_type) {
+    $new_type = ["$property_type->id"=>"$property_type->name"];
+    array_push($property_types, ["$property_type->id"=>"$property_type->name"]);
+  }
+  // print_r($property_types);exit;
+?>
+
     <div class="row more_option_block">
       <p class="more_options">More Options +</p>
       <div class="more_search_options">
@@ -94,12 +104,18 @@
               </li>
               <li>
                 <div class="select-icon">
-                  {{ Form::select('lining_space', array('' => 'Living Space m2', '32' => '32', '45' => '45','55' => '55','75' => '75', '100' => '100',)) }}
+                  {{ Form::select('lining_space', array('' => '> Living Space m2', '25' => '25', '35' => '35','45' => '45','55' => '55', '65' => '65', '75' => '75', '85' => '85', '100' => '100',)) }}
                 </div>
               </li>
               <li>
                 <div class="select-icon">
-                  {{ Form::select('property_type_id', array('' => 'Property Type', '1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5','6' => '6', '7' => '7',)) }}
+                  <!-- {{ Form::select('property_type_id', $property_type_list) }} -->
+                  <select name="property_type_id">
+                    <option value="">Property Type</option>
+                    @foreach ($property_type_list as $property_type)
+                    <option value="{{ $property_type->id }}">{{ $property_type->name }}</option>
+                    @endforeach  
+                  </select>
                 </div>
               </li>
             </ul>
@@ -195,15 +211,17 @@
                         <div class="offer-detail-bg">
                           <div class="flexslider">
                             <ul class="slides">
+                                <?php $image_index=0; ?>
                                 @foreach($property->images as $image)
-                                  <li><img src="{{ url('/')}}/images/profile/{{$image->path}}" /></li>
+                                  <li><img @if($image_index>0) data-src="{{ url('/')}}/images/profile/{{$image->path}}" @else src="{{ url('/')}}/images/profile/{{$image->path}}" @endif @if($image_index>0) class="lazy" @endif alt="" /></li>
+                                <?php $image_index++; ?>
                                 @endforeach
                                 <!--li><img src="images/detail-bg.jpg" /></li-->
                             </ul>
                           </div>
                         </div>
                         @else
-                        <img src="http://development.hestawork.com/apartolino1/public/images/img4.jpg">
+                        <img src="http://development.hestawork.com/apartolino1/public/images/img4.jpg" alt="" />
                         @endif
                     </figure>
                     
@@ -479,8 +497,40 @@
             infowindow.setContent(this.tooltip);
             infowindow.open(map, this);
             $('.flexslider').flexslider({
-                    animation: "slide",
+              touch: true,
+              slideshow: false,
+              controlNav: true,
+              slideshowSpeed: 7000,
+              animationSpeed: 600,
+              initDelay: 0,
+              start: function(slider) { // Fires when the slider loads the first slide
+                var slide_count = slider.count - 1;
+
+                $(slider)
+                  .find('img.lazy:eq(0)')
+                  .each(function() {
+                    var src = $(this).attr('data-src');
+                    $(this).attr('src', src).removeAttr('data-src');
                   });
+              },
+              before: function(slider) { // Fires asynchronously with each slider animation
+                var slides     = slider.slides,
+                    index      = slider.animatingTo,
+                    $slide     = $(slides[index]),
+                    $img       = $slide.find('img[data-src]'),
+                    current    = index,
+                    nxt_slide  = current + 1,
+                    prev_slide = current - 1;
+
+                $slide
+                  .parent()
+                  .find('img.lazy:eq(' + current + '), img.lazy:eq(' + prev_slide + '), img.lazy:eq(' + nxt_slide + ')')
+                  .each(function() {
+                    var src = $(this).attr('data-src');
+                    $(this).attr('src', src).removeAttr('data-src');
+                  });
+              }
+            });
         });
        
         google.maps.event.addListener(marker, 'mouseover', function (e) {
