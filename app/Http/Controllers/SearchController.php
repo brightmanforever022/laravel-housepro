@@ -534,7 +534,6 @@ class SearchController extends Controller
           $where_feature .= " AND $one IN (select feature_id from property_features where property_id=properties.id)";
           
         }
-// print_r($more_search);exit;
 
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
@@ -542,7 +541,6 @@ class SearchController extends Controller
         $end_date   = Input::get('end_date'); 
 
         $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-// echo $actual_link;exit;
         //print_r (explode("-",Input::get('price')));
         
         $porperties = [];
