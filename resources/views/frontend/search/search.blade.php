@@ -539,7 +539,7 @@
           $('#'+marker.tooltip.split('"')[3]+' .text p').css("background", "#F35A57");
           if(marker.getIcon().indexOf("product_") == -1)
           {
-          //alert(marker.getIcon().replace("product", "product_red"));
+          // alert(marker.getIcon().replace("product", "product_red"));
           marker.setIcon(marker.getIcon().replace("product", "product_red"));
           }else 
           {
