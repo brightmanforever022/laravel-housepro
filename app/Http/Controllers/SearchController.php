@@ -376,14 +376,10 @@ class SearchController extends Controller
              return 0;
            }
          }
-
-        
      }
-
 
      public function search()
      {
-      
        $city_where_met = explode(',', Input::get('city_where_met'))[0];
        $price          = Input::get('price'); 
        $bedroom        = Input::get('bedroom'); 
