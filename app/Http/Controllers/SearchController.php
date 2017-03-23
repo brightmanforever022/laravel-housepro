@@ -35,7 +35,7 @@ class SearchController extends Controller
         $this->payment = $payment;
         $this->dynamicText = $dynamicText;
         $this->user = $user;
-        $this->per_page = 3;
+        $this->per_page = 8;
         $this->helper = new \ApartHelper;
     }
  

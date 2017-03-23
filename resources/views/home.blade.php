@@ -1,6 +1,3 @@
-
-
-
 <style type="text/css">
     div {
         border: 1px solid black;

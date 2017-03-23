@@ -100,7 +100,7 @@ if(user_type == 1 )
     	<div class="row">
         	<div class="col-md-12">
             	<h1>Latest Apartments</h1>
-                <p>Discover the latest offers</p>
+                <p class="offer_small_title">Discover the latest offers</p>
             </div>
         </div>
         <div class="row mar-t30">
@@ -118,7 +118,7 @@ if(user_type == 1 )
                         
                     </figure>
                     <p>CHF {{ $property->price_per_night }}</p>
-                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->description, $limit=30, $end="...") }}</h6>
+                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->title, $limit=30, $end="...") }}</h6>
                     <?php 
                     $property_type = \App\PropertyType::where('id', $property->property_type_id)->get();
                     ?>
@@ -137,7 +137,7 @@ if(user_type == 1 )
                         @endif
                     </figure>
                     <p>CHF {{ $property->price_per_night }}</p>
-                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->description, $limit=30, $end="...") }}</h6>
+                    <h6 class="titile-property"><!-- Very comfortable and cosy apartment -->{{ str_limit($property->title, $limit=30, $end="...") }}</h6>
                     <?php 
                     $property_type = \App\PropertyType::where('id', $property->property_type_id)->get();
                     ?>

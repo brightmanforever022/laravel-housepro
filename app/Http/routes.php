@@ -88,14 +88,15 @@ Route::post('forgetUserPassword', ['as' => 'forgetPassword', 'uses' => 'Auth\Aut
 // Route::post('/search', 'SearchController@search');
 
 Route::post('/search', array('as' => 'search', 'uses' => 'SearchController@search'));
+Route::get('/search', array('as' => 'search', 'uses' => 'SearchController@search'));
 
 
 Route::get('/search_home_link', array('as' => 'search_home_link', 'uses' => 'SearchController@search_home_link'));
 
 
-Route::get('/search', function () {
-  return redirect('/');
-});
+// Route::get('/search', function () {
+//   return redirect('/');
+// });
 
 // Route::get('/search_search', function () {
 //   return redirect('/');

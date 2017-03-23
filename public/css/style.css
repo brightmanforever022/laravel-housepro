@@ -2878,6 +2878,14 @@ p.more_options{
 	margin: 0;
 	margin-bottom: 40px;
 }
+.pagination>.active>span{
+	background-color: #fb5252!important;
+	border-color: #fb5252!important;
+	color: #FFF!important;
+}
+.pagination>li>a, .pagination>li>span {
+	color: #525252!important;
+}
 h6.titile-property {
     color: #222;
     letter-spacing: 1px;
@@ -3967,7 +3975,7 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 		font-size: 60px;
 		word-spacing: 0px;
 	}
-	.business_appartment p, .latest_offer p{
+	.business_appartment p, .latest_offer p.offer_small_title{
 		display: none;
 	}
 	.popup{
