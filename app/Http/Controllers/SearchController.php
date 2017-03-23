@@ -427,10 +427,6 @@ class SearchController extends Controller
             $porperties = $this->return_filter($porperties, $start_date, $end_date);
           }
         }  
-
-
-       
-        
       }
       if($city_where_met != "")
       {
@@ -568,7 +564,7 @@ class SearchController extends Controller
                 $pass_end = '';
             }else
             {
-                $end_date_search = \DateTime::createFromFormat('d/m/y H:i', $end_date." 00:00")->format('Y-m-d');//date('Y-m-d',strtotime($end_date));
+                $end_date_search = \DateTime::createFromFormat('d/m/y H:i', $end_date." 00:00")->format('Y-m-d');
                 $pass_end = $end_date_search;
            
             }   
