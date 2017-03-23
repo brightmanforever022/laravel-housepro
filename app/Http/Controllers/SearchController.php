@@ -522,7 +522,6 @@ class SearchController extends Controller
           $where_feature .= " AND $one IN (select feature_id from property_features where property_id=properties.id)";
           
         }
-
         $price      = Input::get('price'); 
         $bedroom    = Input::get('bedroom'); 
         $datepicker = Input::get('start_date'); 
