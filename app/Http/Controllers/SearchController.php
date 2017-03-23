@@ -526,7 +526,7 @@ class SearchController extends Controller
             array_push($more_search, $i);
           }
         }
-        
+        // making sql for more options->features
         $where_feature = "1";
         
         foreach($more_search as $one) {
