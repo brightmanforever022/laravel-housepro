@@ -564,7 +564,7 @@ class SearchController extends Controller
                 $pass = '';
             }else
             {
-                $start_date = \DateTime::createFromFormat('d/m/y H:i', $datepicker." 00:00")->format('Y-m-d');//date('Y-m-d',strtotime($datepicker));
+                $start_date = \DateTime::createFromFormat('d/m/y H:i', $datepicker." 00:00")->format('Y-m-d');
                 $pass = $start_date ;
             } 
 
