@@ -572,7 +572,7 @@ class SearchController extends Controller
             {
                 $date = strtotime("+1 day");
                 $end_date_search = "";
-                //echo $end_date_search; die;
+                
                 $pass_end = '';
             }else
             {
@@ -649,7 +649,6 @@ class SearchController extends Controller
                 }
                 /**************NEW AVALIABLITY FUNCTIONALITY ENDS HERE*****************/ 
             }
-            
             // When $porperties has list, appends 'get' -> parameters into $porperties variable.
             if(count($porperties) > 0){
               return view('frontend.search.search')->with('porperties', $porperties->appends(Input::except('page')))->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met_search'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', $pass_end);
