@@ -541,7 +541,6 @@ class SearchController extends Controller
         $end_date   = Input::get('end_date'); 
 
         $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        //print_r (explode("-",Input::get('price')));
         
         $porperties = [];
 
