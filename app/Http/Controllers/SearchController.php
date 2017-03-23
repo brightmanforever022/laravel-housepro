@@ -504,7 +504,7 @@ class SearchController extends Controller
         if($search_keys['bedroom1'] != null) {
           $where .= ' AND bedroom=' . $search_keys['bedroom1'];
         }
-  // print_r($last_result);exit;
+        
         if($search_keys['bathroom'] != null){
           $where .= ' AND bathroom=' . $search_keys['bathroom'];
         }
