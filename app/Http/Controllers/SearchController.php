@@ -669,7 +669,7 @@ class SearchController extends Controller
       if($more_keys['bedroom1'] != null) {
         $last_result = $last_result->where('bedroom', '=', $more_keys['bedroom1'])->get();
       }
-// print_r($last_result);exit;
+      
       if($more_keys['bathroom'] != null){
         $last_result = $last_result->where('bathroom', '=', $more_keys['bathroom'])->get();
       }
