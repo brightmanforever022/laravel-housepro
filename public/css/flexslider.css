@@ -156,7 +156,7 @@ html[xmlns] .flexslider .slides {
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
-  left: 10px;
+  left: 0;
 }
 .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
