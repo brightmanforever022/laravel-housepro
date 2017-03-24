@@ -2531,7 +2531,7 @@ figure .flex-viewport{
 	max-height: 350px;
 }
 figure .offer-detail-bg .flexslider .slides img{
-	height: 300px;
+	height: 375px;
 }
 .offer-detail-bg .flexslider{
 	border:none;
@@ -3952,7 +3952,11 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	}
 	
 	figure .offer-detail-bg .flexslider .slides img{
-		height: 245px;
+		height: 300px;
+	}
+
+	.offer-detail-bg .flexslider .slides img{
+		height: 300px;
 	}	
 
 	
