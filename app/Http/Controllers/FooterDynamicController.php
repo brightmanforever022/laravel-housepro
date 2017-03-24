@@ -220,7 +220,6 @@ class FooterDynamicController extends AdminController
       return back();
    }
 
-
    public function rowp3Update()
    {
       $i = 2;
