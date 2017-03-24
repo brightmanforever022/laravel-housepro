@@ -157,11 +157,9 @@ class FooterDynamicController extends AdminController
           
         }
       }
-      
       //die;
       return back();
    }
-
   
   //Help Functionality
    public function rowh1Update()
