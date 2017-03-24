@@ -265,8 +265,6 @@ Route::post('/editPaypalAccount', function () {
   return redirect('/edit-profile-host')->with('message','Paypal Account Added Successfully')->with('color','green');;
 });
 
-
-
 Route::get('/reject/{id}', 'UserController@reject');
 
 Route::get('/listing', function () {  
