@@ -209,7 +209,7 @@
 
 <style type="text/css">
     .sticky-div {
-        margin-left: 67.85% !important;
+        margin-left: 66.66% !important;
         z-index: 9999 !important;
     }
 </style>
