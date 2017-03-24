@@ -296,6 +296,4 @@ class FooterDynamicController extends AdminController
        return back();
    }
 
-
-
 }
