@@ -1423,6 +1423,7 @@ header.bg_white .offer-apartment{
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .datepicker td.day:hover {
   background: #eeeeee;
@@ -2527,7 +2528,7 @@ figure .flex-viewport{
 	max-height: 350px;
 }
 figure .offer-detail-bg .flexslider .slides img{
-	height: 350px;
+	height: 300px;
 }
 .offer-detail-bg .flexslider{
 	border:none;
