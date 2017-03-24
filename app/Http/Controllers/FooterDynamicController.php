@@ -51,7 +51,6 @@ class FooterDynamicController extends AdminController
     return view('backend.dynamicsfooter.city.edit')->with('rows', $rows);
    }
 
-
    //Book Functionality
    public function row1Update()
    {
