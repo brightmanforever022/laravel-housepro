@@ -191,7 +191,6 @@ class FooterDynamicController extends AdminController
       return back();
    }
 
-
    //Press Functionality
    public function rowp1Update()
    {
