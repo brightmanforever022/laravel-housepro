@@ -39,7 +39,6 @@ class FooterDynamicController extends AdminController
       return redirect('/need_our_help');
    } 
 
-
    public function edit_press()
    {
     $rows = $this->dynamic->where('type','press')->get()->toArray();
