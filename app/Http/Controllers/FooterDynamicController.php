@@ -81,7 +81,6 @@ class FooterDynamicController extends AdminController
       return back();
    }
 
-
    public function row3Update()
    {
       $i = 4;
@@ -130,7 +129,6 @@ class FooterDynamicController extends AdminController
      
     return back();
    }
-
 
    public function cityUpdate(Request $request)
    {
