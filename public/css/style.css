@@ -223,6 +223,9 @@ header{
 .home {
     padding: 5px 0;
 }
+span.cookie-consent__message{
+	font-family: 'Roboto'!important;
+}
 #div_append_city .city_price{
 	display: block;
 	font-weight: 600;
