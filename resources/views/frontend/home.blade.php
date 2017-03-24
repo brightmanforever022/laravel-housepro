@@ -28,7 +28,7 @@ if(user_type == 1 )
 });
 </script>
 
-<div class="how-to-book">
+<div class="container how-to-book">
     <div class="row">
         <h1 class="how_title">Why APARTOLINO ?</h1>
     </div>

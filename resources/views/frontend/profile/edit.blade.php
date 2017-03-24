@@ -156,7 +156,7 @@ setTimeout(function() {
                     </div>
                     <p class="small-text">Maximum size: 5 MB</p>
                     <fieldset>
-                    	<p class="mar-t40">Please upload high profile image. Best to use your company logo for it. The minimum resolution should be 300 x 300 pixels.</p>
+                    	<p class="mar-t50">Please upload high profile image. Best to use your company logo for it. The minimum resolution should be 300 x 300 pixels.</p>
                     </fieldset>
                 </div>
             </div>

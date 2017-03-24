@@ -1755,7 +1755,7 @@ header.bg_white p{
 	width: 100%;
     padding: 10px;
     background: #c6cbd1;
-    color: #c1c1c1;
+    color: #FFF;
 	outline:none;
 	border: none;
 	font-size: 16px;
@@ -2006,6 +2006,9 @@ p.small-text{
 }
 .mar-t40{
 	margin-top: 40px !important;
+}
+.mar-t50{
+	margin-top: 50px !important;
 }
 .mar-t100{
 	margin-top: 100px !important;
@@ -2676,7 +2679,7 @@ figure .offer-detail-bg .flexslider .slides img{
 	width:100%;
 	top:-66px;
 	left:0;
-	z-index: 1;
+	z-index: 2;
 }
 .appointment-form-box h1{
 	background:rgba(42,57,60,0.8);
