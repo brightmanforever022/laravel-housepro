@@ -3948,6 +3948,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 		top: 10px;
 	}
 	
+	figure .offer-detail-bg .flexslider .slides img{
+		height: 245px;
+	}	
 
 	
 }
