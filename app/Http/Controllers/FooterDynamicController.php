@@ -45,7 +45,6 @@ class FooterDynamicController extends AdminController
     return view('backend.dynamicsfooter.press.edit')->with('rows', $rows);
    }
 
-
    public function edit_city()
    {
     $rows = $this->dynamic->where('type','city')->get()->toArray();
