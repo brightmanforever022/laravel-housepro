@@ -275,7 +275,6 @@ class FooterDynamicController extends AdminController
 
    public function saveCitySingle(Request $request)
    {
-      
               
       if($request->file('file_press'))
       {
