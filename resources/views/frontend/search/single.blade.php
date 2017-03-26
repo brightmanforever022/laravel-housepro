@@ -203,8 +203,7 @@
         //   datesDisabled = [];
         // } console.log(datesDisabled);
       //
-  </script>
-
+</script>
 
 <style type="text/css">
     .sticky-div {
@@ -212,10 +211,8 @@
         z-index: 9999 !important;
     }
 </style>
+
 <script>
-
-
-
 $(document).ready(function()
 {
     if($( window ).width() > 991)
