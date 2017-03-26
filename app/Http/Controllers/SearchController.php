@@ -235,8 +235,6 @@ class SearchController extends Controller
           $porperties = $this->property->where('start_date','<=', $start_date)->where('apartment_for','=' ,$bedroom)->where(DB::raw('CONCAT_WS(" ", plz_place, street)'), 'like', "%{$city_where_met}%")->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->pagenate($this->per_page);
           $porperties = $this->return_filter($porperties);
         }
-
-       
         
       }
       if($city_where_met != "")
