@@ -280,7 +280,6 @@ class SearchController extends Controller
         
         }
         return $this->property->whereIn('id', $array_in)->paginate($this->per_page);
-
         
      }
 
