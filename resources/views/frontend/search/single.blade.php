@@ -796,7 +796,6 @@ $(document).ready(function()
       var geocoder;
       geocoder = new google.maps.Geocoder();
 
-
       $('#mapbutton').click(function()
       {
           var address = $('#address').val();
