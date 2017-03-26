@@ -13,7 +13,7 @@
       \App\Property::where('id', $properties[0]->id)->update(['visitors' => $visitor]);
 
       $initials = \DB::table('admin_initials')->get();
-    // echo 'arrive';exit;
+    
       if(Auth::check())
       $favorite = \App\Favorite::where('user_id', Auth::user()->id)->where('property_id', $properties[0]->id)->get();
       // print_r(count($favorite));exit;
@@ -149,7 +149,6 @@
             } else{
                 var availableDates = false;
             }
-          //
       </script>
       <?php
       $payments_disabled = \App\Payment::where('billing_id', $properties[0]->id)->get()->toArray();
