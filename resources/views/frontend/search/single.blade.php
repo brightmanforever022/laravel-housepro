@@ -844,8 +844,6 @@ $(document).ready(function()
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
-        
-
 
         service.nearbySearch({
           location: pyrmont,
