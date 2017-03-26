@@ -205,8 +205,14 @@
 
 <style type="text/css">
     .sticky-div {
-        /*margin-left: 66.66% !important;*/
+        margin-left: calc(50% + 210px);
         z-index: 9999 !important;
+    }
+    @media screen and (max-width: 1200px) {
+        .sticky-div {
+            margin-left: calc(50% + 177px);
+            z-index: 9999 !important;
+        }
     }
 </style>
 
@@ -787,9 +793,9 @@ $(document).ready(function()
  <script>
  $(document).ready(function()
     {
-      var offsets = document.getElementById('my_div').getBoundingClientRect();
-      console.log(offsets.left);
-      $('.sticky-div').css('margin-left', offsets.left);
+      // var offsets = document.getElementById('my_div').getBoundingClientRect();
+      // console.log(offsets.left);
+      // $('.sticky-div').css({marginLeft: offsets.left + "px"});
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
