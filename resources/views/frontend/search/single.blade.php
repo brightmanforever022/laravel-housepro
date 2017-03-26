@@ -16,7 +16,6 @@
     
       if(Auth::check())
       $favorite = \App\Favorite::where('user_id', Auth::user()->id)->where('property_id', $properties[0]->id)->get();
-      // print_r(count($favorite));exit;
 ?>
 
 <?php
