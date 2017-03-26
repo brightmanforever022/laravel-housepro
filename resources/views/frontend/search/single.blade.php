@@ -675,7 +675,6 @@ $(document).ready(function()
 
                             @endif
 
-                            
                         </form>
                     </div>
                 </div>
