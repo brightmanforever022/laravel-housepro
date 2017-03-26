@@ -857,8 +857,6 @@ $(document).ready(function()
 
       function callback(results, status) {
        
-
-       
             var address = "<?php echo $properties[0]->street." ".$properties[0]->plz_place;?>";
             var icon_path = "<?php echo $properties[0]->icon_path;?>";
 
