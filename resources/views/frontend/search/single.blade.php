@@ -786,9 +786,6 @@ $(document).ready(function()
     height: 450px !important;
 }
 
-
- 
-
 </style>
  <script>
  $(document).ready(function()
@@ -887,9 +884,6 @@ $(document).ready(function()
                 <?php
                 }
                 ?>
-
-                 
-                //console.log(html);
                 createMarker(JSON.parse(JSON.stringify(results[0].geometry.location)), html, icon_path);
                 
               } else {
