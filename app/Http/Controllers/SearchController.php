@@ -412,7 +412,7 @@ class SearchController extends Controller
         if(count($porperties)>0){
           return view('frontend.search.search')->with('porperties', $porperties->appends(Input::except('page')))->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', '');;
         }else{
-          return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', '');;
+          return view('frontend.search.search')->with('porperties', $porperties)->with('city_where_met_location', $city_where_met)->with('some_place', Input::get('city_where_met'))->with('price', Input::get('price'))->with('bedroom', Input::get('bedroom'))->with('start_date', $pass)->with('radius', 0)->with('end_date', '');
         }
       }
       else
