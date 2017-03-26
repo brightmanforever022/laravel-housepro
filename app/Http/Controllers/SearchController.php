@@ -336,9 +336,6 @@ class SearchController extends Controller
               $dt=$end_date;
            }
 
-           
-          
-
            $billingInfo = $this->billingInfo->where('id', $id)->get()->toArray();
            $paymentDate = $start_date;
            $contractDateBegin = $billingInfo[0]['check_in'];
