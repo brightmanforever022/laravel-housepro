@@ -134,7 +134,6 @@
 
       }
 
-      
       if ($host_selected_date) {
         $dates = json_encode(explode(',', $host_selected_date));
       } else {
