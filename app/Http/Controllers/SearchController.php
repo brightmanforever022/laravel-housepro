@@ -73,7 +73,6 @@ class SearchController extends Controller
        return view('frontend.home')->with('properties', $properties)->with('cities', $cities);
       }else
        return redirect('/');
-      
     }
 
     public function helloWorld()
