@@ -57,11 +57,11 @@
         </li>
         <li>
             <div class="select-icon">
-                     @if($end_date)
-                     <input type="text" class="datepicker" name="end_date" placeholder="Check Out" id="end_date_end" value="{{ date('d/m/y',strtotime($end_date)) }}" data-date-format='dd/mm/yy'/>
-                     @else
-                     <input type="text" class="datepicker" name="end_date" placeholder="Check Out" id="end_date_end" data-date-format='dd/mm/yy'/>
-                     @endif
+               @if($end_date)
+               <input type="text" class="datepicker" name="end_date" placeholder="Check Out" id="end_date_end" value="{{ date('d/m/y',strtotime($end_date)) }}" data-date-format='dd/mm/yy'/>
+               @else
+               <input type="text" class="datepicker" name="end_date" placeholder="Check Out" id="end_date_end" data-date-format='dd/mm/yy'/>
+               @endif
                
             </div>
         </li>
