@@ -454,7 +454,7 @@ footer .select-icon {
     -o-appearance: none;
     appearance: none;
     outline: none;
-    font-size: 15px;
+    font-size: 14px;
     /*font-family: 'Roboto';*/
     letter-spacing: 1px;
 }
@@ -3935,7 +3935,7 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	    border-bottom: 1px solid #ddd;
 	}
 	.listing-search form ul li {
-	    width: 75%;
+	    width: 92%;
 	    margin: 10px auto;
 	    float: none;
 	    border-right: none;
