@@ -76,7 +76,6 @@
     $new_type = ["$property_type->id"=>"$property_type->name"];
     array_push($property_types, ["$property_type->id"=>"$property_type->name"]);
   }
-  // print_r($property_types);exit;
 ?>
 
     <div class="row more_option_block">
