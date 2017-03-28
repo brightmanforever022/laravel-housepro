@@ -5,18 +5,18 @@
   $(document).ready(function()
   {
 
-     var x = $( window ).height() - 190;
-     $('.listing-left').css('height', x);
-     $('.listing-right').css('height', x);
-     $('#map').css('height', x);
+    var x = $( window ).height() - 190;
+    $('.listing-left').css('height', x);
+    $('.listing-right').css('height', x);
+    $('#map').css('height', x);
 
-     $(document).on('change', '#bedroom_search', function(){
-        $('#search_button').click();
-     });
+    $(document).on('change', '#bedroom_search', function(){
+      $('#search_button').click();
+    });
 
-     $(document).on('change', '#city_price_id', function(){
-        $('#search_button').click();
-     });
+    $(document).on('change', '#city_price_id', function(){
+      $('#search_button').click();
+    });
 
   });
 </script>
