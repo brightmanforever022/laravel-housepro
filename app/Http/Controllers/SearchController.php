@@ -86,8 +86,6 @@ class SearchController extends Controller
         //return 'PDF saved';
          echo $html;
         die;
-
-
     }
 
    
