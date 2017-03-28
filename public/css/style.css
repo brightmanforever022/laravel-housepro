@@ -3706,6 +3706,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	    margin-left: 0;
 	    width: 50%;
 	}
+	.more_search_options .more_search_options_list{
+		width: 30%;
+	}
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px){
 	.arr-dept table tr th {
@@ -3726,6 +3729,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 
 	.circle-red-booking {
 		right: 141px;
+	}
+	.more_search_options .more_search_options_list{
+		width: 30%;
 	}
 
 }
@@ -3833,6 +3839,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	}
 	.steps-box{
 		min-height: auto;
+	}
+	.more_search_options .more_search_options_list{
+		width: 30%;
 	}
 }
 @media only screen and (max-width: 767px){
@@ -3957,6 +3966,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 
 	.offer-detail-bg .flexslider .slides img{
 		height: 300px;
+	}
+	.more_search_options .more_search_options_list{
+		width: 100%;
 	}	
 
 	
