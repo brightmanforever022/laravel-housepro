@@ -32,9 +32,9 @@
         <li><?php echo Form::text('city_where_met_search',$some_place, array('id' => 'city_where_met_search', 'placeholder' => 'e.g. Zurich,Luzern')); ?></li>
         <li>
             <div class="select-icon">
-                <?php 
-                  echo Form::select('price', array('' => 'Price', '1-500' => '1-500 CHF', '500-1000' => '500-1000 CHF', '1000-5000' => '1000-5000 CHF', '5000-10000' => '5000-10000 CHF'), "$price");
-                ?>
+              <?php 
+                echo Form::select('price', array('' => 'Price', '1-500' => '1-500 CHF', '500-1000' => '500-1000 CHF', '1000-5000' => '1000-5000 CHF', '5000-10000' => '5000-10000 CHF'), "$price");
+              ?>
             </div>
         </li>
         <li>
