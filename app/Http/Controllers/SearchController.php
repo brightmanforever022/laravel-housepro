@@ -77,7 +77,6 @@ class SearchController extends Controller
 
     public function helloWorld()
     {
-
         $properties = $this->property->where('booking_id', 1)->get();
         $html = view('frontend.links.pdf-map', compact('properties'))->render();
         $filename = date('dmYhis').'booking.pdf';
