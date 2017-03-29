@@ -73,12 +73,10 @@ class SearchController extends Controller
        return view('frontend.home')->with('properties', $properties)->with('cities', $cities);
       }else
        return redirect('/');
-      
     }
 
     public function helloWorld()
     {
-
         $properties = $this->property->where('booking_id', 1)->get();
         $html = view('frontend.links.pdf-map', compact('properties'))->render();
         $filename = date('dmYhis').'booking.pdf';
@@ -87,8 +85,6 @@ class SearchController extends Controller
         //return 'PDF saved';
          echo $html;
         die;
-
-
     }
 
    
