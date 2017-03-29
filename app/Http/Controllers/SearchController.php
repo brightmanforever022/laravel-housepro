@@ -173,9 +173,6 @@ class SearchController extends Controller
          $porperties = Property::selectRaw("*, ( 6371 * acos( cos( radians($lat) ) * cos( radians( lat ) ) * cos( radians( lng ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( lat ) ) ) ) AS distance")->having("distance", "<", $radius_km )->where('start_date','<=', $start_date)->where('apartment_for','<=' ,$bedroom)->whereBetween('price_per_night', [$array[0], $array[1]])->orderBy('created_at', 'DESC')->paginate($this->per_page);
           $porperties = $this->return_filter($porperties, $start_date, $end_date); 
         }
-
-        
-       
         
       }
       if($city_where_met != "")
