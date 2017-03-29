@@ -200,10 +200,6 @@ class SearchController extends Controller
        $bedroom        = Input::get('bedroom'); 
        $datepicker     = Input::get('datepicker');  
        $end_date       = "";
-       //  print_r(Input::all());
-       //  die;
-       // //print_r (explode("-",Input::get('price')));
-      
 
       if($city_where_met != "")
       {
