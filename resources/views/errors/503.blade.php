@@ -19,7 +19,6 @@
                 font-weight: 100;
                 font-family: 'Lato';
             }
-
             .container {
                 text-align: center;
                 display: table-cell;
