@@ -113,7 +113,6 @@ class SearchController extends Controller
           }
       }
 
-
      public function searchMap()
      {
        $city_where_met = explode(',', Input::get('address'))[0];
