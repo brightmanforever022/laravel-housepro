@@ -107,10 +107,8 @@ class SearchController extends Controller
                       $result['lng'] = $data['results'][0]['geometry']['location']['lng'];
                   }
               }
-
               return $result;   
           } catch (\Exception $e) {
-             
              dd($e);
           }
       }
