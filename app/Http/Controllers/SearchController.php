@@ -123,8 +123,8 @@ class SearchController extends Controller
        $enddate = Input::get('end_date');  
 
        $lat = Input::get('lat');  
-
        $lng = Input::get('lng');  
+       
        $radius_km = Input::get('radius_km'); 
        
       if($city_where_met != "")
