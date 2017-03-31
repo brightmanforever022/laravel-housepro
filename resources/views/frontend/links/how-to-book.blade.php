@@ -1,10 +1,15 @@
 @extends('frontend.layout.master')
 
 @section('content')
+<style type="text/css">
+    .banner-content {
+        margin-top: 230px;
+    }
+</style>
 <script type="text/javascript">
     $(document).ready(function() {
 $('#close-search-specific-page').hide();
-$('#change-text-specific-page').text("");
+$('#change-text-specific-page').text("HOW TO BOOK");
 setTimeout(function() {
             $('.errorMessage').fadeOut('fast');
             }, 10000);

@@ -1124,6 +1124,7 @@ header.bg_white .main-nav ul li a{
     font-size: 16px;
     text-align: center;
     color: #6e6e6e;
+    margin-bottom: 80px;
 }
 .rent-box{
 	padding:20px;
@@ -3417,7 +3418,7 @@ label#phone-error-some{
 	-ms-border-radius: 50%;
 	margin: 0 auto;
 	position: relative;
-	background: #243336;
+	/*background: #243336;*/
 	text-align: center;
 }
 .how-to-book .circle:hover{
@@ -3427,8 +3428,8 @@ label#phone-error-some{
 	background: #243336;
 }
 .how-to-book .circle img{
-	max-width: 100%;
-	margin-top: 60px;
+	max-width: 60%;
+	margin-top: 45px;
 }
 .how-to-book .circle-number{
 	position: absolute;
@@ -3461,7 +3462,7 @@ label#phone-error-some{
 	font-size: 22px;
 }
 .how-to-book p{
-	text-align: center;
+	text-align: justify;
     font-family: 'Roboto';
     font-size: 14px;
     color: #777;
@@ -3473,6 +3474,7 @@ label#phone-error-some{
 }
 .how-to-book img{
 	margin-top: 20px;
+	max-width: 60%;
 }
 .dashboard-box{
 	margin-top: 100px;
