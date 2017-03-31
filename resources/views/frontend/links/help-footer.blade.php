@@ -1,6 +1,11 @@
 @extends('frontend.layout.master')
 
 @section('content')
+<style type="text/css">
+    .banner-content {
+        margin-top: 230px;
+    }
+</style>
 <script type="text/javascript">
     $(document).ready(function() {
 $('#close-search-specific-page').hide();
