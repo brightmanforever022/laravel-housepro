@@ -58,7 +58,7 @@ if(user_type == 1 )
 	<div class="container">
     	<div class="row">
         	<div class="col-md-12">
-            	<h1 class="wow fadeIn" data-wow-duration="2s">WITH APARTOLINO SAVE TIME AND MONEY</h1>
+            	<h1 class="wow fadeIn" data-wow-duration="2s">APARTOLINO HELPS YOU TO IMPROVE YOUR BUSINESS</h1>
             </div>
         </div>
     </div>

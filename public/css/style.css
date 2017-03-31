@@ -1147,7 +1147,8 @@ header.bg_white .main-nav ul li a{
 	position:relative;
 	height:354x;
 	width:100%;
-	background: url(../images/kuchbhi.jpg) no-repeat;
+	/*background: url(../images/kuchbhi.jpg) no-repeat;*/
+	background-color: #FB5252;
 	background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -3567,6 +3568,7 @@ label#phone-error-some{
 .imprint p strong{
 	color: #000;
 	font-weight: 400;
+	font-size: 15px;
 }
 .mar-t52{
 	margin-top: 52px !important;

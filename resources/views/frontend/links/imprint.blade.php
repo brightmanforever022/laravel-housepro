@@ -13,7 +13,7 @@
             	<div class="imprint">
                     <h1>APPARTOLINO GmbH</h1>
                     <p>Zürcherstrasse 137</p>
-                    <p>8408 Winterthur Switzerland</p>
+                    <p>8406 Winterthur Switzerland</p>
                     <p class="mar-t50"><strong>Managing Director :</strong> Raphael Michel</p>
                     <p><strong>Comapany registration number :</strong></p>
                     <p><strong>VAT Nr. :</strong></p>

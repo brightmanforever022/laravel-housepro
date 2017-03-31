@@ -81,7 +81,7 @@
                                 </div>
                                 </h2>
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                     <div class="row">
                                     <div class="col-md-6">
                                         <div class="arr-dept">
@@ -152,7 +152,7 @@
                                         @endif
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="customer-info">
                                              <table>
                                                 <tr>
@@ -225,7 +225,7 @@
                                 </div>
                                 </h2>
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                     <div class="row">
                                     <div class="col-md-6">
                                         <div class="arr-dept">
@@ -275,7 +275,7 @@
                                        
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="customer-info">
                                              <table>
                                                 <tr>
