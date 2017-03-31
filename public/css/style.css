@@ -3229,7 +3229,7 @@ label#phone-error-some{
 	display: block;
 	border-bottom: 1px solid #a5a5a5;
 	padding: 30px 0;
-	padding-right: 100px;
+	/*padding-right: 100px;*/
 	position: relative;
 }
 

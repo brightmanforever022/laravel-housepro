@@ -59,7 +59,7 @@ class GetController extends Controller
 
     public function press()
     {
-      $rows = $this->dynamic->where('type','press')->get()->toArray();
+      $rows = $this->dynamic->where('type','press')->orderBy('created_at', 'desc')->get()->toArray();
       return view('frontend.links.press')->with('rows', $rows);
     }
 
