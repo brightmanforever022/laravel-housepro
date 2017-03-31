@@ -5,6 +5,9 @@
     .banner-content {
         margin-top: 230px;
     }
+    p.how-to-book-content{
+        margin-bottom: 100px;
+    }
 </style>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -35,7 +38,7 @@ if(user_type == 1 )
                 @foreach($rows as $key=>$value)
                 @if($value['rows'] == 1)
                 <h1 class="wow fadeIn" data-wow-duration="2s">{!! $value['title'] !!}</h1>
-                <p class="wow fadeIn" data-wow-duration="2s">{!! $value['description'] !!}</p>
+                <p class="how-to-book-content wow fadeIn" data-wow-duration="2s">{!! $value['description'] !!}</p>
                 @endif
                 @endforeach
             </div>
