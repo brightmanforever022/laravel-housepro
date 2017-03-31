@@ -3045,6 +3045,9 @@ label#phone-error-some{
 .how-to-book .col-md-4:hover figure{
 	background: #fb5252;
 }
+.how-to-book .paypall{
+	max-width: 60%;
+}
 .how-to-book .iespecial{
 	height: 100px;
 	width: 100px;
@@ -3474,7 +3477,7 @@ label#phone-error-some{
 }
 .how-to-book img{
 	margin-top: 20px;
-	max-width: 60%;
+	max-width: 100%;
 }
 .dashboard-box{
 	margin-top: 100px;
@@ -3511,7 +3514,7 @@ label#phone-error-some{
 	background: #fb5252;
 }
 .dashboard-box .circle img {
-    max-width: 100%;
+    max-width: 55%;
     margin-top: 60px;
 }
 .mar-tb100{
@@ -3697,6 +3700,17 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 }
 .add-favorite i{
 	margin-right:15px;
+}
+.fc-unthemed .fc-today{
+	background:#3e3e3e!important;
+	color:#fff!important;
+}
+.fc-state-highlight{
+	display: block;
+	height: 55px;
+}
+.fc-row .fc-content-skeleton{
+	padding-bottom: 0 !important;
 }
 
 @media only screen and (max-width: 1200px){

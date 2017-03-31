@@ -55,7 +55,7 @@ if(user_type == 1 )
                     <h1 class="wow fadeIn" data-wow-duration="2s">{!! $value['title'] !!}</h1>
                     <p class="wow fadeIn" data-wow-duration="2s">{!! $value['description'] !!}</p>
                      @if($value['id'] == 4)
-                      <img src="images/paypall.png">
+                      <img class="paypall" src="images/paypall.png">
                      @endif
                 </div>
                 @endif

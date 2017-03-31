@@ -630,7 +630,7 @@
     <div class="listing-right">
 
          <!--form method="post" id="mapbuttonform" action="{{ url('/') }}/searchMap"-->
-
+<!--
          {!! Form::open(array('url' => '/searchMap','id' => 'mapbuttonform', 'method' => 'post')) !!}
 
          {{ csrf_field() }}
@@ -659,6 +659,7 @@
         
          <button type="submit" id="mapbutton" ><i class="fa fa-search"></i></button>
          {!! Form::close() !!}
+-->
          <div id="map" style="height:750px;"></div>
    
     </div>
