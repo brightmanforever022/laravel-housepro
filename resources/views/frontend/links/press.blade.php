@@ -101,7 +101,7 @@ if(user_type == 1 )
                             @if($value['rows'] == 4)
                             
                             <li class="wow fadeIn" data-wow-duration="2s"><a href="{{url('/')}}/downLoadLogo/<?=$value['title']?>">Logo <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
-                            <li class="wow fadeIn" data-wow-duration="2s"><a href="{{url('/')}}/downLoadLogo/<?=$value['description']?>">Managment <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
+                            <li class="wow fadeIn" data-wow-duration="2s"><a href="{{url('/')}}/downLoadLogo/<?=$value['description']?>">Management <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
                             <li class="wow fadeIn" data-wow-duration="2s"><a href="{{url('/')}}/downLoadLogo/<?=$value['logo']?>">Press Release <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
                             @endif
                             @endforeach
