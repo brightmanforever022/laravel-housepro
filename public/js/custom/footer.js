@@ -227,7 +227,7 @@ $('#loadMore').click(function(){
             success: function (data) {
                 var x = "";
                 for (index = 0; index < data.length; ++index) {
-                   x = x+ '<li><h2 class="wow fadeIn" data-wow-duration="2s">'+data[index].title+'</h2>'+'<p class="wow fadeIn" data-wow-duration="2s">'+data[index].description+'<p><span>'+data[index].created_at+'</span><div class="arrow"><a href=""><i class="fa fa-angle-right"></i></a></div></li>';
+                   x = x+ '<li><h2 class="wow fadeIn" data-wow-duration="2s">'+data[index].title+'</h2>'+'<p class="wow fadeIn" data-wow-duration="2s">'+data[index].description+'<p><span>'+data[index].created_at+'</span></li>';
                 }
                 $('#div-append').html(x);
             }

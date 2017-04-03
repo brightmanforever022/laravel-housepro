@@ -23,7 +23,7 @@ class GetController extends Controller
 
     public function getLoadBlog()
     {
-       echo json_encode($this->dynamic->where('rows', 3)->where('type', 'press')->get());
+       echo json_encode($this->dynamic->where('rows', 3)->where('type', 'press')->orderBy('created_at', 'desc')->get());
        die;
     }
 

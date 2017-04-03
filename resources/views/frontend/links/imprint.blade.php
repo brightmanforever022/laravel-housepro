@@ -13,13 +13,14 @@
             	<div class="imprint">
                     <h1>APPARTOLINO GmbH</h1>
                     <p>Zürcherstrasse 137</p>
-                    <p>8406 Winterthur Switzerland</p>
-                    <p class="mar-t50"><strong>Managing Director :</strong> Raphael Michel</p>
+                    <p>8406 Winterthur</p>
+                    <p>Switzerland</p>
+                    <p class="mar-t50"><strong>Managing Director :</strong><!--  Raphael Michel --></p>
                     <p><strong>Comapany registration number :</strong></p>
                     <p><strong>VAT Nr. :</strong></p>
                     <p class="mar-t50"><strong>Contact us per E-Mail :</strong></p>
                     <p>support@appartolino.ch</p>
-                    <hr>
+                    <!-- <hr> -->
                 </div>
             </div>
         </div>

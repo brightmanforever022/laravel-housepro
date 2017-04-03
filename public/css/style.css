@@ -3425,7 +3425,8 @@ label#phone-error-some{
 	text-align: center;
 }
 .how-to-book .circle:hover{
-	background: #fb5252;
+	/*background: #fb5252;*/
+	cursor: pointer;
 }
 .how-to-book .circle:hover .circle-number{
 	background: #243336;
@@ -3514,8 +3515,8 @@ label#phone-error-some{
 	background: #fb5252;
 }
 .dashboard-box .circle img {
-    max-width: 55%;
-    margin-top: 60px;
+    max-width: 60%;
+    margin-top: 40px;
 }
 .mar-tb100{
 	margin-top: 100px;
