@@ -1104,7 +1104,7 @@ header.bg_white .main-nav ul li a{
 	color:#333;
 }
 .rent{
-	padding:100px 0;
+	padding:50px 0;
 }
 .rent h1{
 	margin: 0;
@@ -1175,6 +1175,12 @@ header.bg_white .main-nav ul li a{
 .work_provide{
 	padding:50px 0;
 	background:#f2f2f2;
+}
+.work_provide .how-to-book {
+	background:#f2f2f2;
+}
+.work_provide .how-to-book h1{
+	margin: 0 0 20px;
 }
 /*.work_provide .col-md-4{
 	position:relative;
@@ -3045,7 +3051,7 @@ label#phone-error-some{
 }
 .how-to-book{
 	text-align: center;
-	background: #F2F2F2;
+	background: #FBFBFB;
 	padding-bottom: 50px;
 }
 .how-to-book .col-md-4:hover figure{
@@ -3462,7 +3468,7 @@ label#phone-error-some{
     font-family: 'Roboto';
     font-size: 18px;
     color: #2e2e2e;
-    margin: 10px 0 20px;
+    margin: 40px 0 30px;
     padding: 0;
     line-height: 20px;
     letter-spacing: 1px;
