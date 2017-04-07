@@ -116,6 +116,9 @@ if(user_type == 1 )
                     Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
                     </p>
                 </div>
+            </div>
+            <div style="padding: 50px;"></div>
+            <div class="row">
                 <div class="col-md-4">
                     <div class="circle wow fadeIn" data-wow-duration="2s">
                         <img src="images/Calendar-booking.png">
