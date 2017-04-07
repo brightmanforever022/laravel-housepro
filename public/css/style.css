@@ -1161,6 +1161,9 @@ header.bg_white .main-nav ul li a{
 .savetime .promo-img{
 	text-align: center;
 }
+.savetime .promo-img img{
+	width: 100%;
+}
 .savetime h1{
 	margin: 0;
     padding: 0;
@@ -3052,7 +3055,7 @@ label#phone-error-some{
 }
 .how-to-book{
 	text-align: center;
-	background: #FBFBFB;
+	/*background: #FBFBFB;*/
 	padding-bottom: 50px;
 }
 .how-to-book .col-md-4:hover figure{
@@ -3421,7 +3424,7 @@ label#phone-error-some{
 
 }
 .how-to-book-grey{
-	/*background: #f2f2f2;*/
+	background: #f2f2f2;
 	padding: 100px 0;
 }
 .how-to-book .circle{
@@ -4002,7 +4005,9 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	.more_search_options .more_search_options_list{
 		width: 100%;
 	}	
-
+	.savetime h1 {
+		padding: 50px 0;
+	}
 	
 }
 @media only screen and (max-width: 590px){
@@ -4024,13 +4029,15 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 		margin-right: 10px;
 	}
 
-	
+	.savetime h1 {
+		padding: 50px 0;
+	}
 	
 	
 }
 @media only screen and (max-width: 480px){
 	.banner-content h1{
-		font-size: 60px;
+		font-size: 42px;
 		word-spacing: 0px;
 	}
 	.business_appartment p, .latest_offer p.offer_small_title{
@@ -4041,23 +4048,29 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	}
 	.customer-info table tr th{
 	width: 100%;
-}
-.customer-info table tr td.res-dis-none {
-    display: none;
-}
-.customer-info table tr td {
-    width: 100%;
-    display: block;
-}
+	}
+	.customer-info table tr td.res-dis-none {
+	    display: none;
+	}
+	.customer-info table tr td {
+	    width: 100%;
+	    display: block;
+	}
+	.savetime h1 {
+		padding: 50px 0;
+	}
 }
 @media only screen and (max-width: 360px){
 	
 	.offer-description {
 		margin-top: 15px;
- }
- .appointment-form-box form {
-    background: #fff;
-    padding: 10px;
-}
+	 }
+	 .appointment-form-box form {
+	    background: #fff;
+	    padding: 10px;
+	}
+	.savetime h1 {
+		padding: 50px 0;
+	}
 
 }
