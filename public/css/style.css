@@ -1129,9 +1129,13 @@ header.bg_white .main-nav ul li a{
 	padding:20px;
 }
 .rent-box img{
-	max-width:100%;
+	max-width:30%;
 	margin:20px auto;
 	display: inherit;
+}
+.rent-box h4 {
+	font-weight: 300;
+	text-align: center;
 }
 .rent-box p{
 	text-align:justify;
@@ -1153,6 +1157,9 @@ header.bg_white .main-nav ul li a{
     background-position: center;
     background-attachment: fixed;
 }
+.savetime .promo-img{
+	text-align: center;
+}
 .savetime h1{
 	margin: 0;
     padding: 0;
@@ -1162,7 +1169,7 @@ header.bg_white .main-nav ul li a{
     text-align: center;
     /*font-weight: 600;*/
     color: #fff;
-	padding:151px 0;
+	padding:200px 0;
 	letter-spacing:1px;
 }
 .work_provide{

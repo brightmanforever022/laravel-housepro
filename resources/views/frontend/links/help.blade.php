@@ -4,6 +4,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
+$('#change-text-specific-page').html("DISCOVER HOW " + "<br />" + " APARTOLINO WORKS");
 setTimeout(function() {
             $('.errorMessage').fadeOut('fast');
             }, 10000);
@@ -26,7 +27,7 @@ if(user_type == 1 )
 	<div class="container">
     	<div class="row">
         	<div class="col-md-12">
-            	<h1 class="wow fadeIn" data-wow-duration="2s">Rent efficiency with APARTOLINO</h1>
+            	<h1 class="wow fadeIn" data-wow-duration="2s">Why work with APARTOLINO?</h1>
                 <p class="wow fadeIn" data-wow-duration="2s">Your benefits when you advertise with APARTOLINO</p>
             </div>
         </div>
@@ -34,18 +35,21 @@ if(user_type == 1 )
         	<div class="col-md-4">
             	<div class="rent-box wow fadeIn" data-wow-duration="2s">
                 	<img src="images/icon1.png" />
+                    <h4>Targeted Approach</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
                 </div>
             </div>
             <div class="col-md-4">
             	<div class="rent-box wow fadeIn" data-wow-duration="2s">
                 	<img src="images/icon2.png" />
+                    <h4>Fast Processing</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
                 </div>
             </div>
             <div class="col-md-4">
             	<div class="rent-box wow fadeIn" data-wow-duration="2s">
                 	<img src="images/icon3.png" />
+                    <h4>Reduce your costs</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
                     
                 </div>
@@ -57,7 +61,10 @@ if(user_type == 1 )
 <div class="savetime">
 	<div class="container">
     	<div class="row">
-        	<div class="col-md-12">
+        	<div class="col-md-6 col-xs-12 promo-img">
+                <img src="images/APARTOLINO-Promo.png" alt="" />
+            </div>
+            <div class="col-md-6 col-xs-12">
             	<h1 class="wow fadeIn" data-wow-duration="2s">APARTOLINO HELPS YOU TO IMPROVE YOUR BUSINESS</h1>
             </div>
         </div>
