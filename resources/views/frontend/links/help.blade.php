@@ -75,28 +75,71 @@ if(user_type == 1 )
 	<div class="container">
     	<div class="row">
         	<div class="col-md-12">
-            	<h1 class="wow fadeIn" data-wow-duration="2s">How this work for providers</h1>
+            	<h1 class="wow fadeIn" data-wow-duration="2s">How to start as a provider</h1>
                 <p class="wow fadeIn" data-wow-duration="2s">In a few steps to the ad</p>
             </div>
         </div>
-        
-        <div class="row">
-        	<div class="col-md-4">
-            	<div class="work_provide_box wow fadeIn" data-wow-duration="2s">
-                	<img src="images/login.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+        <div class="how-to-book">
+            <div class="row">
+            	<div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/Register-Icon.png">
+                        <div class="circle-number">1</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Register</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
                 </div>
-            </div>
-            <div class="col-md-4">
-            	<div class="work_provide_box wow fadeIn" data-wow-duration="2s">
-                	<img src="images/add-listings.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                <div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/Approved-Provider2.png">
+                        <div class="circle-number">2</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Get Approved</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
                 </div>
-            </div>
-            <div class="col-md-4">
-            	<div class="work_provide_box wow fadeIn" data-wow-duration="2s">
-                	<img src="images/getbooking.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                <div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/Calendar-booking.png">
+                        <div class="circle-number">3</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Register</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/login.png">
+                        <div class="circle-number">4</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Complete Account</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/Add-Listing.png">
+                        <div class="circle-number">5</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Add Listings</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="circle wow fadeIn" data-wow-duration="2s">
+                        <img src="images/Get-bookings.png">
+                        <div class="circle-number">6</div>
+                    </div>
+                    <h1 class="wow fadeIn" data-wow-duration="2s">Get Bookings</h1>
+                    <p class="wow fadeIn" data-wow-duration="2s">
+                    Bei Serviced Apartments handelt es sich um die ,,goldene Mitte" zwichen den Freiheiten und dem komfort einer mobilerten Wohnung sowie der Sicherheit und dem Service (Reinigung, Check-In, Wascheservice, Wartung) eines Hotelaufenthalts. In einer vollausgestatteten wohnung mit kuche / Kitchenette sowie getrennten Wohn- und Schlafbereichen, meist inklusive Schreibtisch und WLAN, ist diese Ubernachtungslosung vor allem durch Monatsraten fur Projekt- und Langzeitgeschaftsreisende geeignet.
+                    </p>
                 </div>
             </div>
         </div>
