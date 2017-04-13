@@ -18,20 +18,18 @@ $("#enddate").datepicker({ dateFormat: 'mm/dd/yy' }).datepicker();
     $host_selected_date = '';
 
     if (count($property_date) > 0) { 
-            $lastIndex = count($property_date) - 1;
-            foreach ($property_date as $key => $date)
-            {
+        $lastIndex = count($property_date) - 1;
+        foreach ($property_date as $key => $date)
+        {
 
-                if ($key == $lastIndex) {
-                    $host_selected_date = $host_selected_date.date('Y-m-d', strtotime($date->selected_date));
-                }  
-                if ($key != $lastIndex) {
-                    $host_selected_date = $host_selected_date.date('Y-m-d', strtotime($date->selected_date)).",";
-                }
-              
-              
+            if ($key == $lastIndex) {
+                $host_selected_date = $host_selected_date.date('Y-m-d', strtotime($date->selected_date));
+            }  
+            if ($key != $lastIndex) {
+                $host_selected_date = $host_selected_date.date('Y-m-d', strtotime($date->selected_date)).",";
             }
-      } 
+        }
+    } 
 
       if ($host_selected_date) {
         $dates = json_encode(explode(',', $host_selected_date));
