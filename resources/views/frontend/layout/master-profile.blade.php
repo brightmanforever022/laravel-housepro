@@ -47,7 +47,7 @@
 
 @yield('custom-javascript')
 {{-- <script type="text/javascript" src="https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js"></script> --}}
-<script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.js"></script>
+<!-- <script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.js"></script> -->
 <script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.min.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/jquery.vide.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/custom/masterprofile.js"></script>
