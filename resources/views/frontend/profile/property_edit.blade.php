@@ -259,7 +259,9 @@ $("#enddate").datepicker({ dateFormat: 'mm/dd/yy' }).datepicker();
                     <fieldset>
                         <div class="select-icon fifthSelect" >
                             <select name="cancel_fee">
-                                @if($properties[0]->cancel_fee == 15)
+                                <option>Cancellation fee*</option>
+                                <option value="30" selected=selected>30%</option>
+                                <!-- @if($properties[0]->cancel_fee == 15)
                                 <option>Cancellation fee*</option>
                                 <option value="15" selected=selected>15%</option>
                                 <option value="20">20%</option>
@@ -274,7 +276,7 @@ $("#enddate").datepicker({ dateFormat: 'mm/dd/yy' }).datepicker();
                                 <option value="15" selected=selected>15%</option>
                                 <option value="20">20%</option>
                                 <option value="30" selected=selected>25%</option>
-                                @endif
+                                @endif -->
 
                             </select>
                         </div>
