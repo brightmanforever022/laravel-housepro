@@ -19,7 +19,8 @@
 
 {{-- <link href="{!! url('/') !!}/css/css/jquery.datepick.css" rel="stylesheet"> --}}
 
-<link rel="stylesheet" type="text/css" href="https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css">
+<link href="{!! url('/') !!}/css/fullcalendar.min.css" type="text/css" rel="stylesheet" />
+<!-- <link rel="stylesheet" type="text/css" href="https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css"> -->
 
 <script type="text/javascript">
       var base_url = '{!! url('/') !!}';
@@ -48,7 +49,7 @@
 @yield('custom-javascript')
 {{-- <script type="text/javascript" src="https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js"></script> --}}
 <!-- <script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.js"></script> -->
-<script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.min.js"></script>
+<script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/jquery.vide.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/custom/masterprofile.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/jquery.sticky-div.js"></script>

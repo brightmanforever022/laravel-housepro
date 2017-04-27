@@ -57,6 +57,9 @@ $(".fc-content .fc-title").html('&nbsp;');
                 editable: true,
                 droppable: true,
                 eventOverlap:false,
+                option: {
+                        firstDay: 1
+                    },
              
                 drop: function(date) {
                     // console.log(  moment(event.start).format("DD-MM-YYYY HH:mm")  + ' ' +  moment(event.end).format("DD-MM-YYYY HH:mm") ); 

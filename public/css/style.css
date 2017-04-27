@@ -3638,7 +3638,7 @@ div#calendar .fc-toolbar .fc-center h2{
 }
 .fc td, .fc th{
 	text-align: center;
-	    line-height: 40px;
+	line-height: 40px;
 }
 /*.fc-basic-view .fc-body .fc-row {
     height: 40px;
@@ -3649,7 +3649,7 @@ div#calendar .fc-toolbar .fc-center h2{
 }
 .fc-scroller.fc-day-grid-container {
     overflow: hidden !important;
-    height: 286px !important;
+    height: 100% !important;
 }
 .fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number{
 	padding: 0 !important;
@@ -3723,8 +3723,8 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 	color:#fff!important;
 }
 .fc-state-highlight{
-	display: block;
-	height: 55px;
+	display: table-cell;
+	height: 100%;
 }
 .fc-row .fc-content-skeleton{
 	padding-bottom: 0 !important;
