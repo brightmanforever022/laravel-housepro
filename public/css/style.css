@@ -3597,66 +3597,7 @@ label#phone-error-some{
 	border-top:1px solid  #000;
 	margin-top: 30px;
 }
-button.fc-today-button {
-    display: none;
-}
-div#calendar {
-    padding: 5px;
-}
-div#calendar .fc-toolbar {
-    text-align: center;
-    position: relative;
-}
-div#calendar .fc-toolbar .fc-left{
-	position: absolute;
-    width: 100%;
-}
-div#calendar button.fc-prev-button.fc-button.fc-state-default.fc-corner-left {
-    position: absolute;
-    left: 0;
-    background: none;
-    border: none;
-    font-size: 16px;
-    padding: 0;
-    color: #999;
-}
-div#calendar button.fc-next-button.fc-button.fc-state-default.fc-corner-right {
-    position: absolute;
-    right: 0;
-    background: none;
-   	border: none;
-    font-size: 16px;
-    padding: 0;
-    color: #999;
-}
-div#calendar .fc-toolbar .fc-center h2{
-	font-size: 14px;
-    line-height: 32px;
-    text-transform: uppercase;
-    color: #f45559;
-    /*font-weight: 600;*/
-}
-.fc td, .fc th{
-	text-align: center;
-	line-height: 40px;
-}
-/*.fc-basic-view .fc-body .fc-row {
-    height: 40px;
-    min-height: auto !important;
-}*/
-.fc-scroller>.fc-day-grid, .fc-scroller>.fc-time-grid{
-	    width: auto;
-}
-.fc-scroller.fc-day-grid-container {
-    overflow: hidden !important;
-    height: 100% !important;
-}
-.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number{
-	padding: 0 !important;
-}
-a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
-    margin-top: -3px;
-}
+
 .continue-btn:hover, .continue-btn:focus {
     color: #fff;
 }
@@ -3728,6 +3669,69 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
 }
 .fc-row .fc-content-skeleton{
 	padding-bottom: 0 !important;
+}
+.fc-future.fc-other-month.fc-day-number {
+	display: none;
+}
+button.fc-today-button {
+    display: none;
+}
+div#calendar {
+    padding: 5px;
+}
+div#calendar .fc-toolbar {
+    text-align: center;
+    position: relative;
+}
+div#calendar .fc-toolbar .fc-left{
+	position: absolute;
+    width: 100%;
+}
+div#calendar button.fc-prev-button.fc-button.fc-state-default.fc-corner-left {
+    position: absolute;
+    left: 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+    color: #999;
+}
+div#calendar button.fc-next-button.fc-button.fc-state-default.fc-corner-right {
+    position: absolute;
+    right: 0;
+    background: none;
+   	border: none;
+    font-size: 16px;
+    padding: 0;
+    color: #999;
+}
+div#calendar .fc-toolbar .fc-center h2{
+	font-size: 14px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #f45559;
+    /*font-weight: 600;*/
+}
+.fc td, .fc th{
+	text-align: center;
+	line-height: 40px;
+}
+/*.fc-basic-view .fc-body .fc-row {
+    height: 40px;
+    min-height: auto !important;
+}*/
+.fc-scroller>.fc-day-grid, .fc-scroller>.fc-time-grid{
+	    width: auto;
+}
+.fc-scroller.fc-day-grid-container {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number{
+	padding: 0 !important;
+}
+a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
+    margin-top: -3px;
 }
 
 @media only screen and (max-width: 1200px){

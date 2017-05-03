@@ -57,9 +57,8 @@ $(".fc-content .fc-title").html('&nbsp;');
                 editable: true,
                 droppable: true,
                 eventOverlap:false,
-                option: {
-                        firstDay: 1
-                    },
+                firstDay: 1,
+                dayNamesShort: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
              
                 drop: function(date) {
                     // console.log(  moment(event.start).format("DD-MM-YYYY HH:mm")  + ' ' +  moment(event.end).format("DD-MM-YYYY HH:mm") ); 
@@ -85,11 +84,24 @@ $(".fc-content .fc-title").html('&nbsp;');
                         $('#calendar').fullCalendar('removeEvents', calEvent._id);
                     }
                 },
+                viewRender: function (view, element) {
+                    // console.log(element);
+                },
                 dayRender: function (date, element, view) {                    
-                    // console.log(dateString);
+                    // console.log(view);
+                    // console.log(nowDate.getMonth());
+                    if(date._d.getMonth() == nowDate.getMonth() + 1){
+                        // console.log(element);
+                        // element.remove();
+                        // return false;
+                    }
+                    // $('.fc-other-month.fc-future').remove();
+                    // console.log(view);
                     $.each(availableDates, function (index, value) {
                         view.el.find('.fc-day[data-date="' + value + '"]').css('background-color', '#f45559');
-                    })
+                    });
+                    // $('#calendar').fullCalendar('windowResize');
+
                                                          
                 },
                 dayClick: function(date, jsEvent, view) {
