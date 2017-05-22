@@ -19,7 +19,7 @@
 
 {{-- <link href="{!! url('/') !!}/css/css/jquery.datepick.css" rel="stylesheet"> --}}
 
-<link href="{!! url('/') !!}/css/fullcalendar.min.css" type="text/css" rel="stylesheet" />
+<!-- <link href="{!! url('/') !!}/css/fullcalendar.min.css" type="text/css" rel="stylesheet" /> -->
 <!-- <link rel="stylesheet" type="text/css" href="https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css"> -->
 
 <script type="text/javascript">
@@ -47,9 +47,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 
 @yield('custom-javascript')
-{{-- <script type="text/javascript" src="https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js"></script> --}}
+<!-- {{-- <script type="text/javascript" src="https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js"></script> --}} -->
 <!-- <script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.js"></script> -->
-<script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.min.js"></script>
+<!-- <script type="text/javascript" src="{!! url('/') !!}/js/fullcalendar.min.js"></script> -->
 <script type="text/javascript" src="{!! url('/') !!}/js/jquery.vide.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/custom/masterprofile.js"></script>
 <script type="text/javascript" src="{!! url('/') !!}/js/jquery.sticky-div.js"></script>
@@ -58,6 +58,9 @@
 {{-- <script src="{!! url('/') !!}/js/js/jquery.plugin.min.js"></script>
 <script src="{!! url('/') !!}/js/js/jquery.datepick.js"></script> --}}
 
+<script type="text/javascript" src="{!! url('/') !!}/js/ng_all.js"></script>
+<script type="text/javascript" src="{!! url('/') !!}/js/ng_ui.js"></script>
+<script type="text/javascript" src="{!! url('/') !!}/js/components/calendar.js"></script>
 <script type="text/javascript">
 
 

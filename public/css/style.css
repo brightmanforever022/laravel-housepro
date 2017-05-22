@@ -3734,6 +3734,17 @@ a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end.fc-draggable {
     margin-top: -3px;
 }
 
+.ng-input-button-container input {
+	font-size: 16px!important;
+	padding: 9px;
+}
+.ng-input-button-container .ng-button {
+	padding: 13px 7px!important;
+}
+.ng_cal_input_field {
+	display: none;
+}
+
 @media only screen and (max-width: 1200px){
 	.select-icon.thirdSelect {
 	    margin-bottom: 15px;

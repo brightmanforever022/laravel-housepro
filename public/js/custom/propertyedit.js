@@ -1,3 +1,19 @@
+ng.ready( function() {
+    var my_cal = new ng.Calendar({
+        input: 'cal_input',
+        end_date: 'year + 3',
+        multi_selection: true,
+        max_selection: 31,
+        hide_clear_button: true,
+        hide_view_all_dates_button: true,
+        visible: true,
+        object: 'cal_div'
+    });
+    $.each(availableDates, function (index, value) {
+        // view.el.find('.ng_cal_dates_tr td[rel="' + value + '"]').css('background-color', '#f45559');
+        my_cal.select_date(value);
+    });
+});
 $(document).ready(function() {
 
 
@@ -11,118 +27,89 @@ $(document).ready(function() {
 
       if(document.getElementById('startdate') != undefined || document.getElementById('startdate') != "")
       {
-            var last_index = availableDates.length - 1;
-          // $("#startdate").datepicker({ dateFormat: 'mm/dd/yy', setdate: availableDates,
-          //   multidate: true }).datepicker();
-          // $("#enddate").datepicker({ dateFormat: 'mm/dd/yy' }).datepicker();
-          // $("#startdate").datepick({
-          //       dateFormat: 'dd/mm/yyyy',
-          //       rangeSelect: true
-          //  });
-          // $("#startdate").datepick('setDate', availableDates[0], availableDates[last_index]);
-          
-          /* initialize the external events*/
-
-            $('#external-events .fc-event').each(function() {
-
-                // store data so the calendar knows to render an event upon drop
-                $(this).data('event', {
-                    title: $.trim($(this).text()), // use the element's text as the event title
-                    stick: true // maintain when user navigates (see docs on the renderEvent method)
-                });
-
-                // make the event draggable using jQuery UI
-                $(this).draggable({
-                    zIndex: 999,
-                    revert: true,      // will cause the event to go back to its
-                    revertDuration: 0  //  original position after the drag
-                });
-
-            });
-
-$(".fc-content .fc-title").html('&nbsp;');
+            
         /* initialize the calendar*/
 
-           var selectedDates = [];
-           var selectedDates1 = [];
-           var unSelectedDates = [];
-           var deleteDates = [];
+            var selectedDates = [];
+            var selectedDates1 = [];
+            var unSelectedDates = [];
+            var deleteDates = [];
 
-           $("#calendar").fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: ''
-                },
-                editable: true,
-                droppable: true,
-                eventOverlap:false,
-                firstDay: 1,
-                dayNamesShort: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
+           // $("#calendar").fullCalendar({
+           //      header: {
+           //          left: 'prev,next today',
+           //          center: 'title',
+           //          right: ''
+           //      },
+           //      editable: true,
+           //      droppable: true,
+           //      eventOverlap:false,
+           //      firstDay: 1,
+           //      dayNamesShort: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
              
-                drop: function(date) {
-                    // console.log(  moment(event.start).format("DD-MM-YYYY HH:mm")  + ' ' +  moment(event.end).format("DD-MM-YYYY HH:mm") ); 
-                    var start = date.format("DD-MM-YYYY");
-                    //var end = date.format("DD-MM-YYYY");
+           //      drop: function(date) {
+           //          // console.log(  moment(event.start).format("DD-MM-YYYY HH:mm")  + ' ' +  moment(event.end).format("DD-MM-YYYY HH:mm") ); 
+           //          var start = date.format("DD-MM-YYYY");
+           //          //var end = date.format("DD-MM-YYYY");
 
-                    selectedDates1.push({'start': start});
-                    //console.log(JSON.stringify(selectedDates));
-                    $("#drop_ranges").val(JSON.stringify(selectedDates1));
-                },
-                eventClick: function(calEvent, jsEvent, view)
-                {
-                    var r = confirm("Are you sure you want to remove this range?");
-                    if (r === true)
-                    {
+           //          selectedDates1.push({'start': start});
+           //          //console.log(JSON.stringify(selectedDates));
+           //          $("#drop_ranges").val(JSON.stringify(selectedDates1));
+           //      },
+           //      eventClick: function(calEvent, jsEvent, view)
+           //      {
+           //          var r = confirm("Are you sure you want to remove this range?");
+           //          if (r === true)
+           //          {
                         
-                        var start = moment(calEvent.start).format("DD-MM-YYYY");
-                        var end = moment(calEvent.end).format("DD-MM-YYYY");
+           //              var start = moment(calEvent.start).format("DD-MM-YYYY");
+           //              var end = moment(calEvent.end).format("DD-MM-YYYY");
 
-                        deleteDates.push({'start': start, 'end': end});
-                        $("#delete_dates").val(JSON.stringify(deleteDates));
+           //              deleteDates.push({'start': start, 'end': end});
+           //              $("#delete_dates").val(JSON.stringify(deleteDates));
                         
-                        $('#calendar').fullCalendar('removeEvents', calEvent._id);
-                    }
-                },
-                viewRender: function (view, element) {
-                    // console.log(element);
-                },
-                dayRender: function (date, element, view) {                    
-                    // console.log(view);
-                    // console.log(nowDate.getMonth());
-                    if(date._d.getMonth() == nowDate.getMonth() + 1){
-                        // console.log(element);
-                        // element.remove();
-                        // return false;
-                    }
-                    // $('.fc-other-month.fc-future').remove();
-                    // console.log(view);
-                    $.each(availableDates, function (index, value) {
-                        view.el.find('.fc-day[data-date="' + value + '"]').css('background-color', '#f45559');
-                    });
-                    // $('#calendar').fullCalendar('windowResize');
+           //              $('#calendar').fullCalendar('removeEvents', calEvent._id);
+           //          }
+           //      },
+           //      viewRender: function (view, element) {
+           //          // console.log(element);
+           //      },
+           //      dayRender: function (date, element, view) {                    
+           //          // console.log(view);
+           //          // console.log(nowDate.getMonth());
+           //          if(date._d.getMonth() == nowDate.getMonth() + 1){
+           //              // console.log(element);
+           //              // element.remove();
+           //              // return false;
+           //          }
+           //          // $('.fc-other-month.fc-future').remove();
+           //          // console.log(view);
+           //          $.each(availableDates, function (index, value) {
+           //              view.el.find('.fc-day[data-date="' + value + '"]').css('background-color', '#f45559');
+           //          });
+           //          // $('#calendar').fullCalendar('windowResize');
 
                                                          
-                },
-                dayClick: function(date, jsEvent, view) {
-                    if ($(this).attr('style')) {
-                        unSelectedDates.push(date.format());
-                        // change the day's background color just for fun
-                        $(this).css('background-color', '#fff');
-                        $("#unselected").val(unSelectedDates);
-                    }
+           //      },
+           //      dayClick: function(date, jsEvent, view) {
+           //          if ($(this).attr('style')) {
+           //              unSelectedDates.push(date.format());
+           //              // change the day's background color just for fun
+           //              $(this).css('background-color', '#fff');
+           //              $("#unselected").val(unSelectedDates);
+           //          }
 
-                },
-                eventResize: function( event, jsEvent, ui, view  ) {
-                    // console.log(  moment(event.start).format("DD-MM-YYYY")  + ' ' +  moment(event.end).format("DD-MM-YYYY") ); 
-                    var start = moment(event.start).format("DD-MM-YYYY");
-                    var end = moment(event.end).format("DD-MM-YYYY");
+           //      },
+           //      eventResize: function( event, jsEvent, ui, view  ) {
+           //          // console.log(  moment(event.start).format("DD-MM-YYYY")  + ' ' +  moment(event.end).format("DD-MM-YYYY") ); 
+           //          var start = moment(event.start).format("DD-MM-YYYY");
+           //          var end = moment(event.end).format("DD-MM-YYYY");
 
-                    selectedDates.push({'start': start, 'end': end});
-                    // console.log(JSON.stringify(selectedDates));
-                    $("#ranges").val(JSON.stringify(selectedDates));
-                } 
-            }); 
+           //          selectedDates.push({'start': start, 'end': end});
+           //          // console.log(JSON.stringify(selectedDates));
+           //          $("#ranges").val(JSON.stringify(selectedDates));
+           //      } 
+           //  }); 
         }
 
     var count = 1;

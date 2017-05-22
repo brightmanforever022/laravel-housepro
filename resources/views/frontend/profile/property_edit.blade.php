@@ -222,10 +222,12 @@ $("#enddate").datepicker({ dateFormat: 'mm/dd/yy' }).datepicker();
                                    {{-- <input type="text" class="datepicker" data-date-format="dd/mm/yy" name="start_date"  placeholder="From*" id="startdate" value="{{ date('d/m/y',strtotime($properties[0]->start_date)) }}"/> --}}
                                    @if ($host_selected_date != '')
                                         {{-- <input type="text" class="datepicker" data-date-format="dd/mm/yy" name="start_date"  placeholder="Select dates*" id="startdate" value="{{ $host_selected_date }}"/> --}}
-                                        <div id="external-events"><div class="fc-event" style="padding: 10px ">Drag and drop this strip on calendar</div></div><div id="calendar"></div>
+                                        <input type="text" id="cal_input" />
+                                        <div id="cal_div"></div>
                                    @else
-                                    {{-- <input type="text" class="datepicker" data-date-format="dd/mm/yy" name="start_date"  placeholder="Select dates*" id="startdate" value=""/> --}}
-                                    <div id="external-events"><div class="fc-event" style="padding: 10px ">Drag and drop this strip on calendar</div></div><div id="calendar"></div>
+                                        {{-- <input type="text" class="datepicker" data-date-format="dd/mm/yy" name="start_date"  placeholder="Select dates*" id="startdate" value=""/> --}}
+                                        <input type="text" id="cal_input" />
+                                        <div id="cal_div"></div>
                                    @endif
                                 {{-- </div> --}}
                                 <!--div class="select-icon">
